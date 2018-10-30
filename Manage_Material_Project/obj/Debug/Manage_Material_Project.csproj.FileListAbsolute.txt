@@ -9,3 +9,14 @@ D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_M
 D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csproj.CoreCompileInputs.cache
 D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.exe
 D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.pdb
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.exe.config
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.exe
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.pdb
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.exe
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.pdb
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\bin\Debug\MaterialSkin.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csprojResolveAssemblyReference.cache
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Properties.Resources.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmDangNhap.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmTrangChu.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csproj.GenerateResource.Cache
