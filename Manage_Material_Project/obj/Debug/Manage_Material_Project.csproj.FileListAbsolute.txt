@@ -1,1 +1,11 @@
 c:\users\thainguyen\documents\visual studio 2015\Projects\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.exe.config
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.exe.config
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.exe
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.pdb
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csprojAssemblyReference.cache
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Properties.Resources.resources
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmDangNhap.resources
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csproj.GenerateResource.cache
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csproj.CoreCompileInputs.cache
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.exe
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.pdb
