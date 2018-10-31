@@ -64,6 +64,12 @@
     <Compile Include="Views\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmLapphieunhapnguyenlieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmLapphieunhapnguyenlieu.Designer.cs">
+      <DependentUpon>frmLapphieunhapnguyenlieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmLapphieunhapnguyenlieu.resx">
+      <DependentUpon>frmLapphieunhapnguyenlieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
@@ -107,7 +116,10 @@
     <None Include="Resources\icons8-buying-96.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-plus-math-16.png" />
+    <None Include="Resources\icons8-plus-math-161.png" />
     <Content Include="Resources\icons8-receipt-92.png" />
+    <None Include="Resources\icons8-sum-30.png" />
     <Content Include="Resources\icons8-shipped-92.png" />
     <Content Include="Resources\icons8-statistics-92.png" />
   </ItemGroup>

@@ -20,3 +20,7 @@ D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Man
 D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmDangNhap.resources
 D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmTrangChu.resources
 D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csproj.GenerateResource.Cache
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmLapphieunhapnguyenlieu.resources
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmTrangChu.resources
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\bin\Debug\MaterialSkin.dll
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csproj.CopyComplete
