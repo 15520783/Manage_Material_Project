@@ -24,3 +24,16 @@ D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_M
 D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmTrangChu.resources
 D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\bin\Debug\MaterialSkin.dll
 D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csproj.CopyComplete
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.exe.config
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.exe
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.pdb
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csprojResolveAssemblyReference.cache
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Properties.Resources.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmDangNhap.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmHoaDonBan.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmLapphieunhapnguyenlieu.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmTrangChu.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csproj.GenerateResource.Cache
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.exe
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.pdb
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\bin\Debug\MaterialSkin.dll
