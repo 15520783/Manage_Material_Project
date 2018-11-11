@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Manage_Material_Project.Views
 {
-    public partial class frmLapPhieuNhapNguyenLieu : Form
+    public partial class frmThemNguyenLieu : Form
     {
-        public frmLapPhieuNhapNguyenLieu()
+        public frmThemNguyenLieu()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox20_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

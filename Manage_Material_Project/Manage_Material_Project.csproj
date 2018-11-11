@@ -70,11 +70,29 @@
     <Compile Include="Views\frmHoaDonBan.Designer.cs">
       <DependentUpon>frmHoaDonBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmLapphieunhapnguyenlieu.cs">
+    <Compile Include="Views\frmLapPhieuNhapNguyenLieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmLapphieunhapnguyenlieu.Designer.cs">
-      <DependentUpon>frmLapphieunhapnguyenlieu.cs</DependentUpon>
+    <Compile Include="Views\frmLapPhieuNhapNguyenLieu.Designer.cs">
+      <DependentUpon>frmLapPhieuNhapNguyenLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmLapPhieuXuatNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmLapPhieuXuatNguyenLieu.Designer.cs">
+      <DependentUpon>frmLapPhieuXuatNguyenLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmThemKhachHang.Designer.cs">
+      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmThemNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmThemNguyenLieu.Designer.cs">
+      <DependentUpon>frmThemNguyenLieu.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmTrangChu.cs">
       <SubType>Form</SubType>
@@ -93,8 +111,17 @@
     <EmbeddedResource Include="Views\frmHoaDonBan.resx">
       <DependentUpon>frmHoaDonBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmLapphieunhapnguyenlieu.resx">
-      <DependentUpon>frmLapphieunhapnguyenlieu.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmLapPhieuNhapNguyenLieu.resx">
+      <DependentUpon>frmLapPhieuNhapNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmLapPhieuXuatNguyenLieu.resx">
+      <DependentUpon>frmLapPhieuXuatNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmThemKhachHang.resx">
+      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmThemNguyenLieu.resx">
+      <DependentUpon>frmThemNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>

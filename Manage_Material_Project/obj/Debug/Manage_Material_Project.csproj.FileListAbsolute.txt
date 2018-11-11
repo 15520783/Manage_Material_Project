@@ -37,3 +37,6 @@ E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Mater
 E:\Ketoan\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.exe
 E:\Ketoan\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.pdb
 E:\Ketoan\Manage_Material_Project\Manage_Material_Project\bin\Debug\MaterialSkin.dll
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmHoaDonBan.resources
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmLapPhieuXuatNguyenLieu.resources
+D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThemNguyenLieu.resources

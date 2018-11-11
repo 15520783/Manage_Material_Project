@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Manage_Material_Project.Views
 {
-    public partial class frmLapPhieuNhapNguyenLieu : Form
+    public partial class frmThemKhachHang : Form
     {
-        public frmLapPhieuNhapNguyenLieu()
+        public frmThemKhachHang()
         {
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox20_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
