@@ -64,11 +64,11 @@
     <Compile Include="Views\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmHoaDonBan.cs">
+    <Compile Include="Views\frmHoaDonBanNguyenLieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmHoaDonBan.Designer.cs">
-      <DependentUpon>frmHoaDonBan.cs</DependentUpon>
+    <Compile Include="Views\frmHoaDonBanNguyenLieu.Designer.cs">
+      <DependentUpon>frmHoaDonBanNguyenLieu.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmLapPhieuNhapNguyenLieu.cs">
       <SubType>Form</SubType>
@@ -108,8 +108,8 @@
     <EmbeddedResource Include="Views\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmHoaDonBan.resx">
-      <DependentUpon>frmHoaDonBan.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmHoaDonBanNguyenLieu.resx">
+      <DependentUpon>frmHoaDonBanNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmLapPhieuNhapNguyenLieu.resx">
       <DependentUpon>frmLapPhieuNhapNguyenLieu.cs</DependentUpon>

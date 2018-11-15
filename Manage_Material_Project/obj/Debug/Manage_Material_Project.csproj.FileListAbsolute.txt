@@ -30,7 +30,6 @@ E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Mater
 E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csprojResolveAssemblyReference.cache
 E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Properties.Resources.resources
 E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmDangNhap.resources
-E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmHoaDonBan.resources
 E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmLapphieunhapnguyenlieu.resources
 E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmTrangChu.resources
 E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csproj.GenerateResource.Cache
@@ -40,3 +39,7 @@ E:\Ketoan\Manage_Material_Project\Manage_Material_Project\bin\Debug\MaterialSkin
 D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmHoaDonBan.resources
 D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmLapPhieuXuatNguyenLieu.resources
 D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThemNguyenLieu.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmLapPhieuXuatNguyenLieu.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThemKhachHang.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThemNguyenLieu.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmHoaDonBanNguyenLieu.resources
