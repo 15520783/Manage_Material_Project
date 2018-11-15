@@ -43,3 +43,19 @@ E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Mater
 E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThemKhachHang.resources
 E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThemNguyenLieu.resources
 E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmHoaDonBanNguyenLieu.resources
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.exe.config
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.exe
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.pdb
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.exe
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.pdb
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\bin\Debug\MaterialSkin.dll
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csprojResolveAssemblyReference.cache
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Properties.Resources.resources
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmDangNhap.resources
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmHoaDonBanNguyenLieu.resources
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmLapPhieuNhapNguyenLieu.resources
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmLapPhieuXuatNguyenLieu.resources
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThemKhachHang.resources
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThemNguyenLieu.resources
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmTrangChu.resources
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csproj.GenerateResource.Cache
