@@ -21,5 +21,10 @@ namespace Manage_Material_Project.Views
         {
 
         }
+
+        private void label_STT_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

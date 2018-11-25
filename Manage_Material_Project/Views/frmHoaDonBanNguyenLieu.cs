@@ -16,5 +16,10 @@ namespace Manage_Material_Project.Views
         {
             InitializeComponent();
         }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

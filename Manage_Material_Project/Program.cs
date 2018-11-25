@@ -18,7 +18,7 @@ namespace Manage_Material_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmThemNguyenLieu());
+            Application.Run(new frmDangNhap());
         }
     }
 }
