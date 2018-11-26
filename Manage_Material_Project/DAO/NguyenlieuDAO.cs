@@ -39,5 +39,12 @@ namespace Manage_Material_Project.DAO
             string query = "INSERT INTO NGUYENLIEU VALUES (" + "'" + manguyenlieu + "',N'" + tennguyenlieu + "','" + donvitinh + "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
+
+        public DataTable Timkiemnguyenlieu (string tennguyenlieu)
+        {
+            string query = "SELECT * FROM NGUYENLIEU WHERE tennguyenlieu like N'%" + tennguyenlieu + "%'";
+            return DataProvider.Instance.ExecuteQuery(query);
+
+        }
     }
 }

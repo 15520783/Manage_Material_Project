@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Manage_Material_Project.DAO;
+using Manage_Material_Project.DTO;
 
 namespace Manage_Material_Project.BLL
 {
@@ -25,6 +26,10 @@ namespace Manage_Material_Project.BLL
         public int _Getsohoadonmoinhat()
         {
             return HoadongiaodichDAO.Instance.Getsohoadonmoinhat();
+        }
+        public int _Themhoadongiaodich(Hoadongiaodich hoadon)
+        {
+            return HoadongiaodichDAO.Instance.Themhoadongiaodich(hoadon);
         }
     }
 }

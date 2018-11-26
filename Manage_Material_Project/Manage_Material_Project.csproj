@@ -50,25 +50,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ChitietgiaodichBUS.cs" />
     <Compile Include="BLL\HoadongiaodichBUS.cs" />
     <Compile Include="BLL\KhachhangBUS.cs" />
     <Compile Include="BLL\KhoBUS.cs" />
     <Compile Include="BLL\NguyenlieuBUS.cs" />
+    <Compile Include="BLL\QuyenBUS.cs" />
     <Compile Include="BLL\TaikhoanBUS.cs" />
     <Compile Include="BLL\TaikhoanketoanBUS.cs" />
+    <Compile Include="DAO\ChitietgiaodichDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\HoadongiaodichDAO.cs" />
     <Compile Include="DAO\KhachhangDAO.cs" />
     <Compile Include="DAO\KhoDAO.cs" />
     <Compile Include="DAO\ModuleChuyenTienSangChu.cs" />
     <Compile Include="DAO\NguyenlieuDAO.cs" />
+    <Compile Include="DAO\QuyenDAO.cs" />
     <Compile Include="DAO\TaikhoanDAO.cs" />
-    <Compile Include="DAO\DatabaseConnector.cs" />
     <Compile Include="DAO\TaikhoanketoanDAO.cs" />
+    <Compile Include="DTO\Chitietgiaodich.cs" />
     <Compile Include="DTO\Hoadongiaodich.cs" />
     <Compile Include="DTO\Khachhang.cs" />
     <Compile Include="DTO\Kho.cs" />
-    <Compile Include="DTO\Nganhang.cs" />
     <Compile Include="DTO\Nguyenlieu.cs" />
     <Compile Include="DTO\Quyen.cs" />
     <Compile Include="DTO\Taikhoan.cs" />

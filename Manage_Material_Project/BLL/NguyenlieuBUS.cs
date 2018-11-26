@@ -37,5 +37,10 @@ namespace Manage_Material_Project.BLL
         {
             return NguyenlieuDAO.Instance.Themnguyenlieu(manguyenlieu,tennguyenlieu, donvitinh);
         }
+
+        public DataTable _Timkiemnguyenlieu(string tennguyenlieu)
+        {
+            return NguyenlieuDAO.Instance.Timkiemnguyenlieu(tennguyenlieu);
+        }
     }
 }
