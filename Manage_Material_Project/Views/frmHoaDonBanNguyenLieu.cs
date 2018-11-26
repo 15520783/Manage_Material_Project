@@ -102,12 +102,11 @@ namespace Manage_Material_Project.Views
             LoadNguyenLieu();
             dgvnguyenlieu.DataSource = NguyenlieuList;
             txttaikhoan.Text = "N131";
-            txtquyen.Text = "2";
-            Hienthithongtinquyen(txtquyen.Text);
             txtsohoadon.Text = HoadongiaodichBUS.Instance._Getsohoadonmoinhat().ToString();
             Hienthighichu("131");
             Loadcmbhinhthucthanhtoan(cmbhinhthucthanhtoan);
             Loadcmbkho(cmbmakho);
+            Loadcmbquyen(cmbquyen);
             Loadcmbmakhachhang(cmbmakhachhang);
             //Hiển thị tài khoản đối ứng
             DataTable dt = TaikhoanketoanBUS.Instance._Laythongtintaikhoan("5111");
@@ -215,6 +214,18 @@ namespace Manage_Material_Project.Views
             temp.DisplayMember = "Text";
             temp.ValueMember = "Value";
 
+        }
+
+        private void Loadcmbquyen(ComboBox temp)
+        {
+            DataTable dt = QuyenBUS.Instance._Laytatcamaquyen();
+            foreach (DataRow row in dt.Rows)
+            {
+                ComboBoxItem item = new ComboBoxItem(row["quyen"].ToString(), row["quyen"].ToString());
+                temp.Items.Add(item);
+            }
+            temp.DisplayMember = "Text";
+            temp.ValueMember = "Value";
         }
 
         private void cmbmakho_SelectedIndexChanged(object sender, EventArgs e)
@@ -344,9 +355,9 @@ namespace Manage_Material_Project.Views
             ClearTextboxes(this.Controls);
             //Khởi tạo các biến default
             txttaikhoan.Text = "N131";
-            txtquyen.Text = "2";
+            cmbquyen.Text = "2";
             txtsohoadon.Text = HoadongiaodichBUS.Instance._Getsohoadonmoinhat().ToString();
-            Hienthithongtinquyen(txtquyen.Text);
+            Hienthithongtinquyen(cmbquyen.Text);
             Hienthighichu("131");
             //Clear datagridview
             dgvnhapnguyenlieu.Rows.Clear();
@@ -395,13 +406,13 @@ namespace Manage_Material_Project.Views
             string taikhoanchinh = txttaikhoan.Text;
             string taikhoandu = txttaikhoandu.Text;
             int makho = Convert.ToInt32((cmbmakho.SelectedItem as ComboBoxItem).Text.ToString());
-            string quyen = txtquyen.Text;
+            string quyen = cmbquyen.Text;
             int makh = Convert.ToInt32((cmbmakhachhang.SelectedItem as ComboBoxItem).Text.ToString());
             var ngayban = Convert.ToDateTime(dtmngayban.Value);
             double tongthueGTGT = Convert.ToDouble(txtthueGTGT.Text);
 
             //Thêm hóa đơn và chi tiết hóa đơn
-            Hoadongiaodich hoadongiaodich = new Hoadongiaodich(sohoadon, ngayphathanh, ngaythanhtoan, hinhthucthanhtoan, lydo, thuesuat, tongtien, taikhoanchinh, taikhoandu, makho, quyen, makh, ngayban, tongthueGTGT);
+            Hoadongiaodich hoadongiaodich = new Hoadongiaodich(sohoadon, ngayphathanh, ngaythanhtoan, hinhthucthanhtoan, lydo, thuesuat, tongtien, taikhoanchinh, taikhoandu, makho, quyen, makh, ngayban, tongthueGTGT,2);
             int flag = 0;
             //Thêm chi tiết giao dịch
             //Thêm hóa đơn giao dịch
@@ -423,6 +434,17 @@ namespace Manage_Material_Project.Views
             }
 
             else MessageBox.Show("Thêm thành công", "Thông báo!");
+        }
+
+        private void cmbquyen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string maquyen = Convert.ToString((cmbquyen.SelectedItem as ComboBoxItem).Value);
+            DataTable dt = QuyenBUS.Instance._GetThongTinByMaquyen(maquyen);
+            foreach (DataRow row in dt.Rows)
+            {
+                txtkyhieu.Text = row["kyhieu"].ToString();
+                txtmauso.Text = row["mauso"].ToString();
+            }
         }
     }
 }

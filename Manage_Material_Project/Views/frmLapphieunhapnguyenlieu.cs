@@ -54,11 +54,10 @@ namespace Manage_Material_Project.Views
             LoadNguyenLieu();
             Loadcmbmakhachhang(cmbmakhachhang);
             Loadcmbkho(cmbmakho);
+            Loadcmbquyen(cmbquyen);
             dgvnguyenlieu.DataSource = NguyenlieuList;
             Loadcmbhinhthucthanhtoan(cmbhinhthucthanhtoan);
             txttaikhoan.Text = "C331";
-            txtquyen.Text = "1";
-            Hienthithongtinquyen(txtquyen.Text);
             txtsohoadon.Text = HoadongiaodichBUS.Instance._Getsohoadonmoinhat().ToString();
             Hienthighichu("331");
             //Hiển thị tài khoản đối ứng
@@ -155,6 +154,18 @@ namespace Manage_Material_Project.Views
             temp.DisplayMember = "Text";
             temp.ValueMember = "Value";
         }
+
+        private void Loadcmbquyen(ComboBox temp)
+        {
+            DataTable dt = QuyenBUS.Instance._Laytatcamaquyen();
+            foreach(DataRow row in dt.Rows)
+            {
+                ComboBoxItem item = new ComboBoxItem(row["quyen"].ToString(), row["quyen"].ToString());
+                temp.Items.Add(item);
+            }
+            temp.DisplayMember = "Text";
+            temp.ValueMember = "Value";
+        }
         private void Loadcmbmakhachhang(ComboBox temp)
         {
             DataTable dt = KhachhangBUS.Instance._Hienthitatcakhachhang();
@@ -205,15 +216,7 @@ namespace Manage_Material_Project.Views
             }
         }
 
-        private void Hienthithongtinquyen(string maquyen)
-        {
-            DataTable dt = QuyenBUS.Instance._GetThongTinByMaquyen(maquyen);
-            foreach(DataRow row in dt.Rows)
-            {
-                txtmauso.Text = row["mauso"].ToString();
-                txtkyhieu.Text = row["kyhieu"].ToString();
-            }
-        }
+ 
 
         private void btnThemnguyenlieu_Click(object sender, EventArgs e)
         {
@@ -340,9 +343,8 @@ namespace Manage_Material_Project.Views
             ClearTextboxes(this.Controls);
             //Khởi tạo các biến default
             txttaikhoan.Text = "C331";
-            txtquyen.Text = "1";
+            cmbquyen.Text = "1";
             txtsohoadon.Text = HoadongiaodichBUS.Instance._Getsohoadonmoinhat().ToString();
-            Hienthithongtinquyen(txtquyen.Text);
             Hienthighichu("331");
             //Clear datagridview
             dgvnhapnguyenlieu.Rows.Clear();
@@ -387,13 +389,13 @@ namespace Manage_Material_Project.Views
             string taikhoanchinh = txttaikhoan.Text;
             string taikhoandu = txttaikhoandu.Text;
             int makho = Convert.ToInt32((cmbmakho.SelectedItem as ComboBoxItem).Text.ToString());
-            string quyen = txtquyen.Text;
+            string quyen = cmbquyen.Text;
             int makh = Convert.ToInt32((cmbmakhachhang.SelectedItem as ComboBoxItem).Text.ToString());
             var ngayban = Convert.ToDateTime(dtmngayban.Value);
             double tongthueGTGT = Convert.ToDouble(txtthueGTGT.Text);
             
             //Thêm hóa đơn và chi tiết hóa đơn
-            Hoadongiaodich hoadongiaodich = new Hoadongiaodich(sohoadon, ngayphathanh, ngaythanhtoan, hinhthucthanhtoan, lydo, thuesuat, tongtien, taikhoanchinh, taikhoandu, makho, quyen, makh, ngayban, tongthueGTGT);
+            Hoadongiaodich hoadongiaodich = new Hoadongiaodich(sohoadon, ngayphathanh, ngaythanhtoan, hinhthucthanhtoan, lydo, thuesuat, tongtien, taikhoanchinh, taikhoandu, makho, quyen, makh, ngayban, tongthueGTGT,1);
             int flag = 0;
             //Thêm chi tiết giao dịch
             //Thêm hóa đơn giao dịch
@@ -421,6 +423,17 @@ namespace Manage_Material_Project.Views
         private void txtthuesuat_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void cmbquyen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string maquyen = Convert.ToString((cmbquyen.SelectedItem as ComboBoxItem).Value);
+            DataTable dt = QuyenBUS.Instance._GetThongTinByMaquyen(maquyen);
+            foreach (DataRow row in dt.Rows)
+            {
+                txtkyhieu.Text = row["kyhieu"].ToString();
+                txtmauso.Text = row["mauso"].ToString();
+            }
         }
     }
 }

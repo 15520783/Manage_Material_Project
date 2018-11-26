@@ -28,6 +28,11 @@ namespace Manage_Material_Project.BLL
             return QuyenDAO.Instance.GetThongTinByMaquyen(maquyen);
         }
 
+        public DataTable _Laytatcamaquyen()
+        {
+            return QuyenDAO.Instance.Laytatcamaquyen();
+        }
+
 
     }
 }

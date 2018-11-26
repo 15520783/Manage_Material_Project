@@ -41,12 +41,11 @@ namespace Manage_Material_Project.Views
             LoadNguyenLieu();
             dgvnguyenlieu.DataSource = NguyenlieuList;
             txttaikhoan.Text = "N621";
-            txtquyen.Text = "2";
-            Hienthithongtinquyen(txtquyen.Text);
             txtsohoadon.Text = HoadongiaodichBUS.Instance._Getsohoadonmoinhat().ToString();
             Hienthighichu("621");
             Loadcmbhinhthucthanhtoan(cmbhinhthucthanhtoan);
             Loadcmbkho(cmbmakho);
+            Loadcmbquyen(cmbquyen);
             Loadcmbmakhachhang(cmbmakhachhang);
             //Hiển thị tài khoản đối ứng
             DataTable dt = TaikhoanketoanBUS.Instance._Laythongtintaikhoan("152");
@@ -130,7 +129,17 @@ namespace Manage_Material_Project.Views
             temp.DisplayMember = "Text";
             temp.ValueMember = "Value";
         }
-
+        private void Loadcmbquyen(ComboBox temp)
+        {
+            DataTable dt = QuyenBUS.Instance._Laytatcamaquyen();
+            foreach (DataRow row in dt.Rows)
+            {
+                ComboBoxItem item = new ComboBoxItem(row["quyen"].ToString(), row["quyen"].ToString());
+                temp.Items.Add(item);
+            }
+            temp.DisplayMember = "Text";
+            temp.ValueMember = "Value";
+        }
         private void Loadcmbkho(ComboBox temp)
         {
             DataTable dt = KhoBUS.Instance._Hienthitatcakho();
@@ -226,9 +235,9 @@ namespace Manage_Material_Project.Views
             ClearTextboxes(this.Controls);
             //Khởi tạo các biến default
             txttaikhoan.Text = "N621";
-            txtquyen.Text = "2";
+            cmbquyen.Text = "2";
             txtsohoadon.Text = HoadongiaodichBUS.Instance._Getsohoadonmoinhat().ToString();
-            Hienthithongtinquyen(txtquyen.Text);
+            Hienthithongtinquyen(cmbquyen.Text);
             Hienthighichu("621");
             //Clear datagridview
             dgvnhapnguyenlieu.Rows.Clear();
@@ -239,6 +248,17 @@ namespace Manage_Material_Project.Views
             foreach (DataRow row in dt.Rows)
             {
                 txttentaikhoandu.Text = row["tentaikhoan"].ToString();
+            }
+        }
+
+        private void cmbquyen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string maquyen = Convert.ToString((cmbquyen.SelectedItem as ComboBoxItem).Value);
+            DataTable dt = QuyenBUS.Instance._GetThongTinByMaquyen(maquyen);
+            foreach (DataRow row in dt.Rows)
+            {
+                txtkyhieu.Text = row["kyhieu"].ToString();
+                txtmauso.Text = row["mauso"].ToString();
             }
         }
     }

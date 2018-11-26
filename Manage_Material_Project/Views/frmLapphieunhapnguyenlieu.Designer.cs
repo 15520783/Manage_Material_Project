@@ -73,7 +73,6 @@
             this.txtmauso = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtquyen = new System.Windows.Forms.TextBox();
             this.dgvnhapnguyenlieu = new System.Windows.Forms.DataGridView();
             this.txtdonvi = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -103,6 +102,7 @@
             this.dgvnguyenlieu = new System.Windows.Forms.DataGridView();
             this.txtnguyenlieu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cmbquyen = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -310,13 +310,13 @@
             this.panel3.Controls.Add(this.txtmauso);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.txtquyen);
             this.panel3.Controls.Add(this.dgvnhapnguyenlieu);
             this.panel3.Controls.Add(this.txtdonvi);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.btnThemkhachhang);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.txttenkho);
+            this.panel3.Controls.Add(this.cmbquyen);
             this.panel3.Controls.Add(this.cmbmakhachhang);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Location = new System.Drawing.Point(3, 34);
@@ -602,16 +602,6 @@
             this.label8.Size = new System.Drawing.Size(48, 17);
             this.label8.TabIndex = 20;
             this.label8.Text = "Quyển:";
-            // 
-            // txtquyen
-            // 
-            this.txtquyen.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtquyen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtquyen.Location = new System.Drawing.Point(382, 4);
-            this.txtquyen.Name = "txtquyen";
-            this.txtquyen.ReadOnly = true;
-            this.txtquyen.Size = new System.Drawing.Size(294, 25);
-            this.txtquyen.TabIndex = 19;
             // 
             // dgvnhapnguyenlieu
             // 
@@ -942,6 +932,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Danh sách nguyên liệu";
             // 
+            // cmbquyen
+            // 
+            this.cmbquyen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbquyen.FormattingEnabled = true;
+            this.cmbquyen.Location = new System.Drawing.Point(380, 4);
+            this.cmbquyen.Name = "cmbquyen";
+            this.cmbquyen.Size = new System.Drawing.Size(164, 25);
+            this.cmbquyen.TabIndex = 1;
+            this.cmbquyen.SelectedIndexChanged += new System.EventHandler(this.cmbquyen_SelectedIndexChanged);
+            // 
             // frmLapPhieuNhapNguyenLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1015,7 +1015,6 @@
         private System.Windows.Forms.TextBox txtmauso;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtquyen;
         private System.Windows.Forms.TextBox txtmaso;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
@@ -1044,5 +1043,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cmbquyen;
     }
 }

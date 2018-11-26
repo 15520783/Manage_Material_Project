@@ -22,10 +22,11 @@ namespace Manage_Material_Project.DTO
         public int makh { get; set; }
         public DateTime ngayban { get; set; }
         public double tongthueGTGT { get; set; }
+        public int loaiHD;
        
 
         public Hoadongiaodich() { }
-        public Hoadongiaodich(int sohd, DateTime ngayphathanh, DateTime ngaythanhtoan, string hinhthucthanhtoan, string lydo, double thuesuat, double tongtien, string taikhoanchinh, string taikhoandu,int makho, string quyen, int makh, DateTime ngayban, double tongtienGTGT)
+        public Hoadongiaodich(int sohd, DateTime ngayphathanh, DateTime ngaythanhtoan, string hinhthucthanhtoan, string lydo, double thuesuat, double tongtien, string taikhoanchinh, string taikhoandu,int makho, string quyen, int makh, DateTime ngayban, double tongtienGTGT,int loaiHD)
         {
             this.sohd = sohd;
             this.ngayphathanh = ngayphathanh;
@@ -41,6 +42,7 @@ namespace Manage_Material_Project.DTO
             this.makh = makh;
             this.ngayban = ngayban;
             this.tongthueGTGT = tongtienGTGT;
+            this.loaiHD = loaiHD;
         }
     }
 }

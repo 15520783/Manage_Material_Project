@@ -32,7 +32,7 @@ namespace Manage_Material_Project.DAO
         {
             string query = "INSERT INTO HOADONGIAODICH VALUES (" + hoadon.sohd + ",'" + hoadon.ngayphathanh + "','"
                 + hoadon.ngaythanhtoan + "',N'" + hoadon.hinhthucthanhtoan + "',N'" + hoadon.lydo + "'," + hoadon.thuesuat + "," + hoadon.tongtien + ",'"
-                + hoadon.taikhoanchinh + "'," + hoadon.makho + ",'" + hoadon.quyen + "'," + hoadon.makh + ",'" + hoadon.ngayban + "'," + hoadon.tongthueGTGT + ")";
+                + hoadon.taikhoanchinh + "'," + hoadon.makho + ",'" + hoadon.quyen + "'," + hoadon.makh + ",'" + hoadon.ngayban + "'," + hoadon.tongthueGTGT +","+hoadon.loaiHD+ ")";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
         

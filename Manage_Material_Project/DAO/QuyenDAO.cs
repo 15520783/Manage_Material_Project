@@ -27,5 +27,11 @@ namespace Manage_Material_Project.DAO
             string query = "SELECT * FROM QUYEN WHERE quyen = @maquyen";
             return DataProvider.Instance.ExecuteQuery(query, new object[] { maquyen });
         }
+
+        public DataTable Laytatcamaquyen()
+        {
+            string query = "SELECT * FROM QUYEN";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
