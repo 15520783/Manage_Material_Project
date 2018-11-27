@@ -25,7 +25,7 @@ namespace Manage_Material_Project.DAO
         }
 
         public DataProvider() { }
-        SqlConnection conn;
+        //SqlConnection conn;
 
 
         /* public void Connect()

@@ -47,6 +47,7 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Lập phiếu nhập mua nguyên liệu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -57,6 +58,7 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Lập phiếu xuất nguyên liệu";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -67,6 +69,7 @@
             this.label3.TabIndex = 5;
             this.label3.Text = " Lập phiếu xuất bán nguyên liệu";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -77,6 +80,7 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Thống kê báo biểu";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button3
             // 
@@ -89,6 +93,7 @@
             this.button3.Size = new System.Drawing.Size(185, 185);
             this.button3.TabIndex = 6;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 

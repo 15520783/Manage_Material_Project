@@ -60,3 +60,35 @@ F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Mate
 F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csproj.GenerateResource.Cache
 D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmHoaDonBanNguyenLieu.resources
 D:\HTTTKeToan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThemKhachHang.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.exe.config
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.exe
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.pdb
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.exe
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\Manage_Material_Project.pdb
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\MaterialSkin.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csprojResolveAssemblyReference.cache
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Properties.Resources.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmDangNhap.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmHoaDonBanNguyenLieu.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmLapPhieuNhapNguyenLieu.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmLapPhieuXuatNguyenLieu.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThemKhachHang.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThemNguyenLieu.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmTrangChu.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.csproj.GenerateResource.Cache
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmReportXuatNguyenLieu.resources
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\RdlCompile.cache
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\RdlCompile.compiled
+D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThongKeBaoBieu.resources

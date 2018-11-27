@@ -37,8 +37,11 @@
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +71,14 @@
     <Compile Include="DAO\QuyenDAO.cs" />
     <Compile Include="DAO\TaikhoanDAO.cs" />
     <Compile Include="DAO\TaikhoanketoanDAO.cs" />
+    <Compile Include="dbDataSet.cs">
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DTO\Chitietgiaodich.cs" />
     <Compile Include="DTO\Hoadongiaodich.cs" />
     <Compile Include="DTO\Khachhang.cs" />
@@ -110,6 +121,12 @@
     <Compile Include="Views\frmLapPhieuXuatNguyenLieu.Designer.cs">
       <DependentUpon>frmLapPhieuXuatNguyenLieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmReportXuatNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmReportXuatNguyenLieu.Designer.cs">
+      <DependentUpon>frmReportXuatNguyenLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmThemKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +139,12 @@
     <Compile Include="Views\frmThemNguyenLieu.Designer.cs">
       <DependentUpon>frmThemNguyenLieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmThongKeBaoBieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmThongKeBaoBieu.Designer.cs">
+      <DependentUpon>frmThongKeBaoBieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +156,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\NhatKyXuatNguyenLieu.rdlc" />
     <EmbeddedResource Include="Views\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,15 +169,32 @@
     <EmbeddedResource Include="Views\frmLapPhieuXuatNguyenLieu.resx">
       <DependentUpon>frmLapPhieuXuatNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmReportXuatNguyenLieu.resx">
+      <DependentUpon>frmReportXuatNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmThemKhachHang.resx">
       <DependentUpon>frmThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmThemNguyenLieu.resx">
       <DependentUpon>frmThemNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmThongKeBaoBieu.resx">
+      <DependentUpon>frmThongKeBaoBieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dbDataSet.xsc">
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbDataSet.xss">
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -181,6 +222,8 @@
     <None Include="Resources\icons8-plus-math-16.png" />
     <None Include="Resources\icons8-plus-math-161.png" />
     <None Include="Resources\icons8-cancel-48 %281%29.png" />
+    <Content Include="Resources\icons8-deployment-filled-50.png" />
+    <Content Include="Resources\icons8-deployment-filled-92.png" />
     <Content Include="Resources\icons8-receipt-92.png" />
     <None Include="Resources\icons8-sum-30.png" />
     <None Include="Resources\icons8-restart.png" />
