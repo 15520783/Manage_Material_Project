@@ -222,6 +222,8 @@
     <None Include="Resources\icons8-plus-math-16.png" />
     <None Include="Resources\icons8-plus-math-161.png" />
     <None Include="Resources\icons8-cancel-48 %281%29.png" />
+    <Content Include="Resources\icons8-arrow-pointing-left-48.png" />
+    <Content Include="Resources\icons8-backspace-48.png" />
     <Content Include="Resources\icons8-deployment-filled-50.png" />
     <Content Include="Resources\icons8-deployment-filled-92.png" />
     <Content Include="Resources\icons8-receipt-92.png" />

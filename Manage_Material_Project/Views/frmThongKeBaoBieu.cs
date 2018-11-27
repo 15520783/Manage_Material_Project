@@ -19,9 +19,17 @@ namespace Manage_Material_Project.Views
 
         private void btnTaoPhieuMua_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             frmReportXuatNguyenLieu frmreportXuatNguyenLieu = new frmReportXuatNguyenLieu();
             frmreportXuatNguyenLieu.ShowDialog();
+            this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmTrangChu frmtrangchu = new frmTrangChu();
+            frmtrangchu.ShowDialog();
             this.Show();
         }
     }
