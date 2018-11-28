@@ -92,3 +92,9 @@ D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Man
 D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\RdlCompile.cache
 D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\RdlCompile.compiled
 D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThongKeBaoBieu.resources
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmReportXuatNguyenLieu.resources
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThongKeBaoBieu.resources
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\RdlCompile.cache
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\RdlCompile.compiled
+F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmReportMuaNguyenLieu.resources

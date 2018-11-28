@@ -32,5 +32,12 @@ namespace Manage_Material_Project.Views
             frmtrangchu.ShowDialog();
             this.Show();
         }
+
+        private void btnXemNhatKyMua_Click(object sender, EventArgs e)
+        {
+            frmReportMuaNguyenLieu frmreportMuaNguyenLieu = new frmReportMuaNguyenLieu();
+            frmreportMuaNguyenLieu.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -121,6 +121,12 @@
     <Compile Include="Views\frmLapPhieuXuatNguyenLieu.Designer.cs">
       <DependentUpon>frmLapPhieuXuatNguyenLieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmReportMuaNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmReportMuaNguyenLieu.Designer.cs">
+      <DependentUpon>frmReportMuaNguyenLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmReportXuatNguyenLieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\NhatKyMuaNguyenLieu.rdlc" />
     <EmbeddedResource Include="Reports\NhatKyXuatNguyenLieu.rdlc" />
     <EmbeddedResource Include="Views\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -168,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmLapPhieuXuatNguyenLieu.resx">
       <DependentUpon>frmLapPhieuXuatNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmReportMuaNguyenLieu.resx">
+      <DependentUpon>frmReportMuaNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmReportXuatNguyenLieu.resx">
       <DependentUpon>frmReportXuatNguyenLieu.cs</DependentUpon>

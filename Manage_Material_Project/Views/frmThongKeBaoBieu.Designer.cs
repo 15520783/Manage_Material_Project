@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnTaoPhieuMua = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnXemNhatKyMua = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -71,11 +73,36 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(401, 266);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(267, 25);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Xem nhật kí mua nguyên liệu";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnXemNhatKyMua
+            // 
+            this.btnXemNhatKyMua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.btnXemNhatKyMua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXemNhatKyMua.BackgroundImage")));
+            this.btnXemNhatKyMua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnXemNhatKyMua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemNhatKyMua.Location = new System.Drawing.Point(439, 78);
+            this.btnXemNhatKyMua.Name = "btnXemNhatKyMua";
+            this.btnXemNhatKyMua.Size = new System.Drawing.Size(185, 185);
+            this.btnXemNhatKyMua.TabIndex = 11;
+            this.btnXemNhatKyMua.UseVisualStyleBackColor = false;
+            this.btnXemNhatKyMua.Click += new System.EventHandler(this.btnXemNhatKyMua_Click);
+            // 
             // frmThongKeBaoBieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnXemNhatKyMua);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTaoPhieuMua);
@@ -89,5 +116,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTaoPhieuMua;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnXemNhatKyMua;
     }
 }
