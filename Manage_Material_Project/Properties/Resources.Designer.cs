@@ -83,6 +83,16 @@ namespace Manage_Material_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_checkmark_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-checkmark-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_plus_math_16 {
             get {
                 object obj = ResourceManager.GetObject("icons8-plus-math-16", resourceCulture);

@@ -12,11 +12,25 @@ namespace Manage_Material_Project.Views
 {
     public partial class frmTrangChu : Form
     {
+
         public frmTrangChu()
         {
             InitializeComponent();
         }
+        public static int loaiphieu = 0;
 
+        private static frmTrangChu _instance;
+        public static frmTrangChu Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new frmTrangChu();
+                }
+                return _instance;
+            }
+        }
         private void frmTrangChu_Load(object sender, EventArgs e)
         {
 
@@ -24,54 +38,36 @@ namespace Manage_Material_Project.Views
 
         private void btnTaoPhieuMua_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmLapPhieuNhapNguyenLieu frmlapphieunhap = new frmLapPhieuNhapNguyenLieu();
-            frmlapphieunhap.ShowDialog();
-            this.Show();
+            loaiphieu = 1;
+
+            // frmLapPhieuNhapNguyenLieu frmlapphieunhap = new frmLapPhieuNhapNguyenLieu();
+            //frmlapphieunhap.ShowDialog();
+            frmChonKho frm = new frmChonKho();
+            DialogResult result = frm.ShowDialog(this);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmLapPhieuXuatNguyenLieu frmlapphieuxuat = new frmLapPhieuXuatNguyenLieu();
-            frmlapphieuxuat.ShowDialog();
-            this.Show();
+            loaiphieu = 3;
+            //this.Hide();
+            frmChonKho frm = new frmChonKho();
+            DialogResult result = frm.ShowDialog(this);
+            //this.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmHoaDonBanNguyenLieu frmlaphoadon = new frmHoaDonBanNguyenLieu();
-            frmlaphoadon.ShowDialog();
-            this.Show();
+            loaiphieu = 2;
+            //this.Hide();
+            frmChonKho frm = new frmChonKho();
+            DialogResult result = frm.ShowDialog(this);
+            //this.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void frmTrangChu_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmThongKeBaoBieu frmthongkebaobieu = new frmThongKeBaoBieu();
-            frmthongkebaobieu.ShowDialog();
-            this.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }

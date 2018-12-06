@@ -18,14 +18,11 @@ namespace Manage_Material_Project.Views
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void frmThemNguyenLieu_Load(object sender, EventArgs e)
         {
-            txtmanguyenlieu.Text = NguyenlieuBUS.Instance._Getmanguyenlieumoinhat().ToString();
+            txtmanguyenlieu.Text = DanhmucnguyenlieuBUS.Instance._Getmanguyenlieumoinhat().ToString();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -42,7 +39,7 @@ namespace Manage_Material_Project.Views
             }
             else
             {
-                if (NguyenlieuBUS.Instance._Themnguyenlieu(Convert.ToInt32(txtmanguyenlieu.Text), txttennguyenlieu.Text.ToString(), txtdonvitinh.Text.ToString()) > 0)
+                if (DanhmucnguyenlieuBUS.Instance._Themnguyenlieu(Convert.ToInt32(txtmanguyenlieu.Text), txttennguyenlieu.Text.ToString(), txtdonvitinh.Text.ToString()) > 0)
                     MessageBox.Show("Thêm nguyên liệu thành công", "Thông báo!");
             }
             
@@ -50,7 +47,7 @@ namespace Manage_Material_Project.Views
 
         private void frmThemNguyenLieu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+            ((frmChonNguyenLieu)this.Owner).LoadDgvNguyenLieu();
         }
     }
 }

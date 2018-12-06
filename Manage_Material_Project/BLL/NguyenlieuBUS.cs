@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
+using Manage_Material_Project.DTO;
 using Manage_Material_Project.DAO;
 
 namespace Manage_Material_Project.BLL
@@ -23,24 +23,14 @@ namespace Manage_Material_Project.BLL
             }
         }
 
-        public DataTable _Hienthitatcanguyenlieu()
+        public int _Themchitietgiaodich(Nguyenlieu chitiet)
         {
-            return NguyenlieuDAO.Instance.Hienthitatcanguyenlieu();
+            return NguyenlieuDAO.Instance.Themchitietgiaodich(chitiet);
         }
 
-        public int _Getmanguyenlieumoinhat()
+        public int _Xoachitietgiaodich(string pso)
         {
-            return NguyenlieuDAO.Instance.Getmanguyenlieumoinhat();
-        }
-
-        public int _Themnguyenlieu(int manguyenlieu,string tennguyenlieu, string donvitinh)
-        {
-            return NguyenlieuDAO.Instance.Themnguyenlieu(manguyenlieu,tennguyenlieu, donvitinh);
-        }
-
-        public DataTable _Timkiemnguyenlieu(string tennguyenlieu)
-        {
-            return NguyenlieuDAO.Instance.Timkiemnguyenlieu(tennguyenlieu);
+            return NguyenlieuDAO.Instance.Xoachitietgiaodich(pso);
         }
     }
 }

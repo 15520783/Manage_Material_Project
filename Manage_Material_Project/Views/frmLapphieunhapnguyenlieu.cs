@@ -17,48 +17,43 @@ namespace Manage_Material_Project.Views
     public partial class frmLapPhieuNhapNguyenLieu : Form
     {
 
-        public frmLapPhieuNhapNguyenLieu()
+        public frmLapPhieuNhapNguyenLieu(string makho, string tenkho)
         {
             InitializeComponent();
+            txtmakho.Text = makho;
+            txttenkho.Text = tenkho;
+
+        }
+        //Các hàm được thực hiện khi chuyển form
+        public void Loadkhachhang(string makh, string donvi, string diachi, string taikhoan, string maso)
+        {
+            txtmakhachang.Text = makh;
+            txtdonvi.Text = donvi;
+            txtdiachi.Text = diachi;
+            txttaikhoankhach.Text = taikhoan;
+            txtmaso.Text = maso;
         }
 
-        private static frmLapPhieuNhapNguyenLieu _instance;
-        private static frmLapPhieuNhapNguyenLieu Instance
+        public void Chonmanguyenlieu(string manguyenlieu)
         {
-            get
-            {
-                if (_instance == null)
-                    _instance = new frmLapPhieuNhapNguyenLieu();
-                return _instance;
-            }
+            dgvnhapnguyenlieu.CurrentCell.Value = manguyenlieu;
+            int indexrow = dgvnhapnguyenlieu.CurrentCell.RowIndex;
+            dgvnhapnguyenlieu.Rows[indexrow].Cells["taikhoandu"].Value = "N1521";
+
         }
+        //
         //Các biến global
-        BindingSource NguyenlieuList = new BindingSource();
+       
         private double tongtienhang = 0;
-        private List<Chitietgiaodich> listChitietgiaodich = new List<Chitietgiaodich>();
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox20_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private List<Nguyenlieu> listChitietgiaodich = new List<Nguyenlieu>();
 
         private void frmLapPhieuNhapNguyenLieu_Load(object sender, EventArgs e)
         {
             
             Setupdatagridview();
-            LoadNguyenLieu();
-            Loadcmbmakhachhang(cmbmakhachhang);
-            Loadcmbkho(cmbmakho);
-            Loadcmbquyen(cmbquyen);
-            dgvnguyenlieu.DataSource = NguyenlieuList;
             Loadcmbhinhthucthanhtoan(cmbhinhthucthanhtoan);
             txttaikhoan.Text = "C331";
-            txtsohoadon.Text = HoadongiaodichBUS.Instance._Getsohoadonmoinhat().ToString();
+            txtsophieu.Text = PhieuBUS.Instance._Getsohoadonmoinhat(1).ToString() + "-" + dtmngayphathanh.Value.Month + "-" + dtmngayphathanh.Value.Year % 100;
             Hienthighichu("331");
             //Hiển thị tài khoản đối ứng
             DataTable dt = TaikhoanketoanBUS.Instance._Laythongtintaikhoan("152");
@@ -70,31 +65,10 @@ namespace Manage_Material_Project.Views
 
         }
 
-        private void LoadNguyenLieu()
-        {
-            NguyenlieuList.DataSource = NguyenlieuBUS.Instance._Hienthitatcanguyenlieu(); 
-        }
-
+      
         private void Setupdatagridview()
         {
-            dgvnguyenlieu.AutoGenerateColumns = false;
-            if (dgvnguyenlieu.ColumnCount == 0)
-            {
-                dgvnguyenlieu.ColumnCount = 2;
-                dgvnguyenlieu.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 8, FontStyle.Bold);
-                dgvnguyenlieu.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
-                
-                dgvnguyenlieu.Columns[0].Name = "manl";
-                dgvnguyenlieu.Columns[0].HeaderText = "Mã nguyên liệu";
-                dgvnguyenlieu.Columns[0].Width = 100;
-                dgvnguyenlieu.Columns[0].DataPropertyName = "manl";
-                
-                dgvnguyenlieu.Columns[1].Name = "tennguyenlieu";
-                dgvnguyenlieu.Columns[1].HeaderText = "Tên nguyên liệu";
-                dgvnguyenlieu.Columns[1].Width = 200;
-                dgvnguyenlieu.Columns[1].DataPropertyName = "tennguyenlieu";
-               
-            }
+            
 
             dgvnhapnguyenlieu.AutoGenerateColumns = false;
             if(dgvnhapnguyenlieu.ColumnCount == 0)
@@ -105,12 +79,12 @@ namespace Manage_Material_Project.Views
 
                 dgvnhapnguyenlieu.Columns[0].Name = "taikhoandu";
                 dgvnhapnguyenlieu.Columns[0].HeaderText = "TKDU";
-                dgvnhapnguyenlieu.Columns[0].Width = 70;
+                dgvnhapnguyenlieu.Columns[0].Width = 120;
                 dgvnhapnguyenlieu.Columns[0].DataPropertyName = "taikhoandu";
 
                 dgvnhapnguyenlieu.Columns[1].Name = "manl";
                 dgvnhapnguyenlieu.Columns[1].HeaderText = "Mã nguyên liệu";
-                dgvnhapnguyenlieu.Columns[1].Width = 150;
+                dgvnhapnguyenlieu.Columns[1].Width = 155;
                 dgvnhapnguyenlieu.Columns[1].DataPropertyName = "manl";
 
                 dgvnhapnguyenlieu.Columns[2].Name = "soluong";
@@ -142,61 +116,7 @@ namespace Manage_Material_Project.Views
             temp.DisplayMember = "Text";
             temp.ValueMember = "Value";
         }
-
-        private void Loadcmbkho(ComboBox temp)
-        {
-            DataTable dt = KhoBUS.Instance._Hienthitatcakho();
-            foreach (DataRow row in dt.Rows)
-            {
-                ComboBoxItem item = new ComboBoxItem(row["tenkho"].ToString(), row["makho"].ToString());
-                temp.Items.Add(item);
-            }
-            temp.DisplayMember = "Text";
-            temp.ValueMember = "Value";
-        }
-
-        private void Loadcmbquyen(ComboBox temp)
-        {
-            DataTable dt = QuyenBUS.Instance._Laytatcamaquyen();
-            foreach(DataRow row in dt.Rows)
-            {
-                ComboBoxItem item = new ComboBoxItem(row["quyen"].ToString(), row["quyen"].ToString());
-                temp.Items.Add(item);
-            }
-            temp.DisplayMember = "Text";
-            temp.ValueMember = "Value";
-        }
-        private void Loadcmbmakhachhang(ComboBox temp)
-        {
-            DataTable dt = KhachhangBUS.Instance._Hienthitatcakhachhang();
-            foreach (DataRow row in dt.Rows)
-            {
-                ComboBoxItem item = new ComboBoxItem(row["makh"].ToString(), row["makh"].ToString());
-                temp.Items.Add(item);
-            }
-            temp.DisplayMember = "Text";
-            temp.ValueMember = "Value";
-
-        }
-
-        private void cmbmakho_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txttenkho.Text = (cmbmakho.SelectedItem as ComboBoxItem).Value.ToString();
-        }
-
-        private void cmbmakhachhang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int makhachhang = Convert.ToInt32((cmbmakhachhang.SelectedItem as ComboBoxItem).Value);
-            DataTable dt = KhachhangBUS.Instance._GetthongtinKHbyMaKH(makhachhang);
-            foreach (DataRow row in dt.Rows)
-            {
-                txtdonvi.Text = row["ten"].ToString();
-                txtdiachi.Text = row["diachi"].ToString();
-                txttaikhoankhach.Text = row["sotaikhoan"].ToString();
-                txtmaso.Text = row["masothue"].ToString();
-            }
-        }
-
+     
         private void Hienthighichu(string mataikhoan)
         {
             DataTable dt = TaikhoanketoanBUS.Instance._Laythongtintaikhoan(mataikhoan);
@@ -217,78 +137,6 @@ namespace Manage_Material_Project.Views
         }
 
  
-
-        private void btnThemnguyenlieu_Click(object sender, EventArgs e)
-        {
-            frmThemNguyenLieu frmthemnguyenlieu = new frmThemNguyenLieu();
-            frmthemnguyenlieu.ShowDialog();
-            LoadNguyenLieu();
-            dgvnguyenlieu.DataSource = NguyenlieuList;
-
-        }
-
-        private void btnThemvaods_Click(object sender, EventArgs e)
-        {
-            int manguyenlieu = 0;
-            // Lấy thông tin nguyên liệu được thêm vào
-            foreach (DataGridViewRow row in dgvnguyenlieu.SelectedRows)
-            {
-                manguyenlieu = Convert.ToInt32(row.Cells[0].Value.ToString());
-            }
-            if (manguyenlieu == 0 || txtdongiamua.Text == "" || txtsoluongmua.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo");
-                return;
-            }
-            //Khai báo các biến lưu trữ dữ liệu
-            int soluongmua = Convert.ToInt32(txtsoluongmua.Text);
-            double dongiamua = Convert.ToDouble(txtdongiamua.Text);
-            double thanhtien = soluongmua * dongiamua;
-            tongtienhang += thanhtien;
-            int flag = 0;
-            //Thêm vào list chi tiết giao dịch, kiểm tra trùng mã nguyên liệu
-            for(int i = 0; i < listChitietgiaodich.Count; i++)
-            {
-                if(listChitietgiaodich[i].manl == manguyenlieu)
-                {
-                    listChitietgiaodich[i].soluong += soluongmua;
-                    listChitietgiaodich[i].thanhtien += thanhtien;
-                    flag = -1;
-                }
-            }
-            if(flag == 0)
-            {
-                Chitietgiaodich chitietgiaodich = new Chitietgiaodich(Convert.ToInt32(txtsohoadon.Text), manguyenlieu, soluongmua, dongiamua, thanhtien, "N1521");
-                listChitietgiaodich.Add(chitietgiaodich);
-            }
-
-            //Thay đổi dgv nguyên liệu thêm vào
-            dgvnhapnguyenlieu.Rows.Clear();
-            for(int i =0; i<listChitietgiaodich.Count; i++)
-            {
-                dgvnhapnguyenlieu.Rows.Add(listChitietgiaodich[i].taikhoandu, listChitietgiaodich[i].manl, listChitietgiaodich[i].soluong, listChitietgiaodich[i].dongia, listChitietgiaodich[i].thanhtien);
-
-            }
-            //Thay đổi text box thành tiền
-            txttongtienhang.Text = tongtienhang.ToString();
-            if (txtthuesuat.Text != "")
-            {
-                txtthueGTGT.Text = (Convert.ToDouble(txtthuesuat.Text) / 100 * Convert.ToDouble(txttongtienhang.Text)).ToString();
-                txttongcong.Text = (Convert.ToDouble(txtthueGTGT.Text) + Convert.ToDouble(txttongtienhang.Text)).ToString();
-                txttienbangchu.Text = ModuleChuyenTienSangChu.So_chu(Convert.ToDouble(txttongcong.Text));
-            }
-            else
-            {
-                txttongcong.Text = (txttongtienhang.Text).ToString();
-                txttienbangchu.Text = ModuleChuyenTienSangChu.So_chu(Convert.ToDouble(txttongcong.Text));
-            }
-            //Clear textbox soluong và dongia
-            txtdongiamua.Clear();
-            txtsoluongmua.Clear();
-
-
-        }
-
         private void txtthuesuat_TextChanged(object sender, EventArgs e)
         {
             if(txttongtienhang.Text != "")
@@ -308,32 +156,12 @@ namespace Manage_Material_Project.Views
                 
             }
         }
-
-        private void txtsoluongmua_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void txtdongiamua_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void btnTimkiem_Click(object sender, EventArgs e)
-        {
-            if (txtnguyenlieu.Text != "")
-            {
-                DataTable dt = NguyenlieuBUS.Instance._Timkiemnguyenlieu(txtnguyenlieu.Text);
-                dgvnguyenlieu.DataSource = dt;
-            }
-            else
-                dgvnguyenlieu.DataSource = NguyenlieuList;
-            
-        }
-
+        
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Close();
+            frmTrangChu.Instance.Show();
+
         }
 
         private void btnHoanlai_Click(object sender, EventArgs e)
@@ -343,8 +171,7 @@ namespace Manage_Material_Project.Views
             ClearTextboxes(this.Controls);
             //Khởi tạo các biến default
             txttaikhoan.Text = "C331";
-            cmbquyen.Text = "1";
-            txtsohoadon.Text = HoadongiaodichBUS.Instance._Getsohoadonmoinhat().ToString();
+            txtsophieu.Text = PhieuBUS.Instance._Getsohoadonmoinhat(1).ToString() + "-" + dtmngayphathanh.Value.Month + "-" + dtmngayphathanh.Value.Year % 100;
             Hienthighichu("331");
             //Clear datagridview
             dgvnhapnguyenlieu.Rows.Clear();
@@ -362,10 +189,50 @@ namespace Manage_Material_Project.Views
         private void btnLuu_Click(object sender, EventArgs e)
         {
             //Kiểm tra điều kiện rỗng của các trường
-            if (txttenkho.Text == "" || cmbmakhachhang.Text == "" || txttongtienhang.Text == "")
+            if (txtsohoadon.Text == "" || txtmakhachang.Text == "" || txttongtienhang.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần thiết!", "Thông báo");
                 return;
+            }
+            //Tạo list các chi tiết giao dịch
+            listChitietgiaodich.Clear();
+            string taikhoandoiung = "";
+            int manl = 0;
+            int soluong = 0;
+            double dongia = 0;
+            double thanhtien = 0;
+            for (int row = 0; row < dgvnhapnguyenlieu.RowCount - 1; row++)
+            {
+                if (dgvnhapnguyenlieu.Rows[row].Cells["taikhoandu"].Value != null)
+                {
+                    taikhoandoiung = dgvnhapnguyenlieu.Rows[row].Cells["taikhoandu"].Value.ToString();
+                }
+                if (dgvnhapnguyenlieu.Rows[row].Cells["manl"].Value != null)
+                {
+                    manl = Convert.ToInt32(dgvnhapnguyenlieu.Rows[row].Cells["manl"].Value.ToString());
+                }
+                if (dgvnhapnguyenlieu.Rows[row].Cells["soluong"].Value != null)
+                {
+                    soluong = Convert.ToInt32(dgvnhapnguyenlieu.Rows[row].Cells["soluong"].Value.ToString());
+                }
+                if (dgvnhapnguyenlieu.Rows[row].Cells["dongia"].Value != null)
+                {
+                    dongia = Convert.ToDouble(dgvnhapnguyenlieu.Rows[row].Cells["dongia"].Value.ToString());
+                }
+                if (dgvnhapnguyenlieu.Rows[row].Cells["thanhtien"].Value != null)
+                {
+                    thanhtien = Convert.ToDouble(dgvnhapnguyenlieu.Rows[row].Cells["thanhtien"].Value.ToString());
+                }
+
+                if (dgvnhapnguyenlieu.Rows[row].Cells["soluong"].Value == null || dgvnhapnguyenlieu.Rows[row].Cells["dongia"].Value == null || dgvnhapnguyenlieu.Rows[row].Cells["thanhtien"].Value == null || dgvnhapnguyenlieu.Rows[row].Cells["manl"].Value == null)
+                {
+                    MessageBox.Show("Thông báo", "Vui lòng nhập nguyên liệu cần bán");
+                    return;
+                }
+                Nguyenlieu nguyenlieu = new Nguyenlieu(txtsophieu.Text, manl, soluong, dongia, thanhtien, taikhoandoiung);
+                listChitietgiaodich.Add(nguyenlieu);
+
+
             }
             //Khởi tạo các biến tạm lưu trữ thông tin
             int sohoadon = Convert.ToInt32(txtsohoadon.Text);
@@ -373,50 +240,80 @@ namespace Manage_Material_Project.Views
             var ngaythanhtoan = Convert.ToDateTime(dtmngaythanhtoan.Value);
             string lydo = txtlydo.Text;
             string hinhthucthanhtoan = "";
-            if(cmbhinhthucthanhtoan.Text != "")
+            if (cmbhinhthucthanhtoan.Text != "")
             {
                 hinhthucthanhtoan = (cmbhinhthucthanhtoan.SelectedItem as ComboBoxItem).Value.ToString();
             }
-               
-            
             int thuesuat = 0;
-            if (txtthuesuat.Text!="")
+            if (txtthuesuat.Text != "")
             {
                 thuesuat = Convert.ToInt32(txtthuesuat.Text);
             }
-           
+
             double tongtien = Convert.ToDouble(txttongtienhang.Text);
             string taikhoanchinh = txttaikhoan.Text;
             string taikhoandu = txttaikhoandu.Text;
-            int makho = Convert.ToInt32((cmbmakho.SelectedItem as ComboBoxItem).Text.ToString());
-            string quyen = cmbquyen.Text;
-            int makh = Convert.ToInt32((cmbmakhachhang.SelectedItem as ComboBoxItem).Text.ToString());
+            int makh = Convert.ToInt32(txtmakhachang.Text);
             var ngayban = Convert.ToDateTime(dtmngayban.Value);
             double tongthueGTGT = Convert.ToDouble(txtthueGTGT.Text);
-            
+            int makho = Convert.ToInt32(txtmakho.Text);
             //Thêm hóa đơn và chi tiết hóa đơn
-            Hoadongiaodich hoadongiaodich = new Hoadongiaodich(sohoadon, ngayphathanh, ngaythanhtoan, hinhthucthanhtoan, lydo, thuesuat, tongtien, taikhoanchinh, taikhoandu, makho, quyen, makh, ngayban, tongthueGTGT,1);
+            Phieu hoadongiaodich = new Phieu(txtsophieu.Text, sohoadon, ngayphathanh, ngaythanhtoan, hinhthucthanhtoan, lydo, thuesuat, tongtien, taikhoanchinh, taikhoandu, makho, "Q001", makh, ngayban, tongthueGTGT, 1);
             int flag = 0;
             //Thêm chi tiết giao dịch
             //Thêm hóa đơn giao dịch
-            if (HoadongiaodichBUS.Instance._Themhoadongiaodich(hoadongiaodich) > 0)
+            if (PhieuBUS.Instance._Themhoadongiaodich(hoadongiaodich) > 0)
             {
                 for (int i = 0; i < listChitietgiaodich.Count; i++)
                 {
-                    if (ChitietgiaodichBUS.Instance._Themchitietgiaodich(listChitietgiaodich[i]) <= 0)
-                        flag = -1;
+                    if (NguyenlieuBUS.Instance._Themchitietgiaodich(listChitietgiaodich[i]) > 0)
+                    {
+                        DataTable dt = TonkhoBUS.Instance._Kiemtratonkhotontai(dtmngayban.Value.Month, dtmngayban.Value.Year, Convert.ToInt32(txtmakho.Text), Convert.ToInt32(listChitietgiaodich[i].manl));
+                        if(dt.Rows.Count == 0)
+                        {
+                            TonkhoBUS.Instance._Themmoitonkho(Convert.ToInt32(txtmakho.Text), Convert.ToInt32(listChitietgiaodich[i].manl), dtmngayban.Value.Month, dtmngayban.Value.Year, Convert.ToInt32(listChitietgiaodich[i].soluong));
+                        }
+                        else
+                        {
+                            foreach (DataRow row in dt.Rows)
+                            {
+                                int soluongtonmoi = Convert.ToInt32(row["soluongton"].ToString()) + listChitietgiaodich[i].soluong;
+                                TonkhoBUS.Instance._Updatetonkho(dtmngayban.Value.Month, dtmngayban.Value.Year, Convert.ToInt32(listChitietgiaodich[i].manl), Convert.ToInt32(txtmakho.Text), soluongtonmoi);
+                            }
 
-                 }
-                if(flag == 0)
-                {
-                    MessageBox.Show("Thêm thành công. Bạn có muốn in hóa đơn không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        }
+                    }
+                    else
+                    {
+                        flag = -1;
+                    }
+
+                       
 
                 }
-                else MessageBox.Show("Thêm thành công", "Thông báo!");
+                if (flag == 0)
+                {
+
+                    MessageBox.Show("Thêm thành công. Bạn có muốn in hóa đơn không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
+                }
+                else
+                {
+                    NguyenlieuBUS.Instance._Xoachitietgiaodich(txtsophieu.Text);
+                    PhieuBUS.Instance._Xoaphieubypso(txtsophieu.Text);
+                    MessageBox.Show("Lỗi", "Thông báo!");
+                }
+
 
             }
 
-            else MessageBox.Show("Thêm thành công", "Thông báo!");
+            else
+            {
+                NguyenlieuBUS.Instance._Xoachitietgiaodich(txtsophieu.Text);
+                PhieuBUS.Instance._Xoaphieubypso(txtsophieu.Text);
+                MessageBox.Show("Lỗi 1", "Thông báo!");
+            }
 
         }
 
@@ -425,15 +322,67 @@ namespace Manage_Material_Project.Views
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void cmbquyen_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtmakhachang_Enter(object sender, EventArgs e)
         {
-            string maquyen = Convert.ToString((cmbquyen.SelectedItem as ComboBoxItem).Value);
-            DataTable dt = QuyenBUS.Instance._GetThongTinByMaquyen(maquyen);
-            foreach (DataRow row in dt.Rows)
+            frmChonKhachHang frm = new frmChonKhachHang();
+            DialogResult result = frm.ShowDialog(this);
+        }
+
+        private void dgvnhapnguyenlieu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvnhapnguyenlieu.CurrentCell.ColumnIndex.Equals(1) && e.RowIndex != -1)
             {
-                txtkyhieu.Text = row["kyhieu"].ToString();
-                txtmauso.Text = row["mauso"].ToString();
+                frmChonNguyenLieu frm = new frmChonNguyenLieu();
+                DialogResult result = frm.ShowDialog(this);
             }
+        }
+
+        private void dgvnhapnguyenlieu_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvnhapnguyenlieu.CurrentCell != null)
+            {
+                if (dgvnhapnguyenlieu.CurrentCell.ColumnIndex.Equals(3) && e.RowIndex != -1)
+                {
+                    int indexrow = dgvnhapnguyenlieu.CurrentCell.RowIndex;
+                    if (dgvnhapnguyenlieu.Rows[indexrow].Cells["soluong"].Value.ToString() != "")
+                    {
+                        dgvnhapnguyenlieu.Rows[indexrow].Cells["thanhtien"].Value = Convert.ToUInt32(dgvnhapnguyenlieu.Rows[indexrow].Cells["soluong"].Value) * Convert.ToUInt32(dgvnhapnguyenlieu.Rows[indexrow].Cells["dongia"].Value);
+                    }
+                    //Thay đổi các textbox tính tiền hàng
+                    tongtienhang += Convert.ToDouble(dgvnhapnguyenlieu.Rows[indexrow].Cells["thanhtien"].Value);
+                    txttongtienhang.Text = tongtienhang.ToString();
+                    if (txtthuesuat.Text != "")
+                    {
+                        txtthueGTGT.Text = (tongtienhang * Convert.ToDouble(txtthuesuat.Text) * 0.01).ToString();
+                    }
+                    else txtthueGTGT.Text = "0";
+                    txttongcong.Text = (tongtienhang + Convert.ToDouble(txtthueGTGT.Text)).ToString();
+                    txttienbangchu.Text = ModuleChuyenTienSangChu.So_chu(Convert.ToDouble(txttongcong.Text));
+                }
+            }
+        }
+
+        private void dtmngayphathanh_ValueChanged(object sender, EventArgs e)
+        {
+            txtsophieu.Text = PhieuBUS.Instance._Getsohoadonmoinhat(1).ToString() + "-" + dtmngayphathanh.Value.Month + "-" + dtmngayphathanh.Value.Year % 100;
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (NguyenlieuBUS.Instance._Xoachitietgiaodich(txtsophieu.Text) > 0)
+            {
+                PhieuBUS.Instance._Xoaphieubypso(txtsophieu.Text);
+                MessageBox.Show("Xóa thành công phiếu số " + txtsophieu.Text, "Thông báo!");
+            }
+            else
+                MessageBox.Show("Không tồn tại phiếu số " + txtsophieu.Text + "trong hệ thống.", "Thông báo!");
+        }
+
+        private void frmLapPhieuNhapNguyenLieu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmTrangChu.Instance.Show();
+
         }
     }
 }

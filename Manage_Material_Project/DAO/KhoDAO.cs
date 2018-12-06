@@ -27,5 +27,7 @@ namespace Manage_Material_Project.DAO
             string query = "SELECT * FROM KHO";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+       
     }
 }

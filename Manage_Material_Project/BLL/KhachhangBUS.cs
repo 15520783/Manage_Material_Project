@@ -31,6 +31,21 @@ namespace Manage_Material_Project.BLL
         {
             return KhachhangDAO.Instance.GetthongtinKHbyMaKH(makh);
         }
+        public DataTable _GetKhachHangByTen(string tenkhachhang)
+        {
+            return KhachhangDAO.Instance.GetKhachHangByTen(tenkhachhang);
+        }
+
+        public DataTable _Hienthitatcaphanxuong()
+        {
+            return KhachhangDAO.Instance.Hienthitatcaphanxuong();
+        }
+
+        public DataTable _GetPhanXuongByTen(string ten)
+        {
+            return KhachhangDAO.Instance.GetPhanXuongByTen(ten);
+        }
+
 
     }
 }

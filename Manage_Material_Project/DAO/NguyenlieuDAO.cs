@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
+using Manage_Material_Project.DTO;
 
 namespace Manage_Material_Project.DAO
 {
@@ -22,29 +22,16 @@ namespace Manage_Material_Project.DAO
             }
         }
 
-        public DataTable Hienthitatcanguyenlieu()
+        public int Themchitietgiaodich(Nguyenlieu chitietgiaodich)
         {
-            string query = "SELECT * FROM NGUYENLIEU";
-            return DataProvider.Instance.ExecuteQuery(query);
-        }
-
-        public int Getmanguyenlieumoinhat()
-        {
-            string query = "SELECT COUNT(*) FROM NGUYENLIEU";
-            return (int)DataProvider.Instance.ExecuteScalar(query) + 100000001;
-        }
-
-        public int Themnguyenlieu(int manguyenlieu,string tennguyenlieu, string donvitinh)
-        {
-            string query = "INSERT INTO NGUYENLIEU VALUES (" + "'" + manguyenlieu + "',N'" + tennguyenlieu + "','" + donvitinh + "')";
+            string query = "INSERT INTO NGUYENLIEU VALUES ('" + chitietgiaodich.pso + "'," + chitietgiaodich.manl + "," + chitietgiaodich.soluong + "," + chitietgiaodich.dongia + ","+chitietgiaodich.thanhtien+",'" + chitietgiaodich.taikhoandu + "')";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
 
-        public DataTable Timkiemnguyenlieu (string tennguyenlieu)
+        public int Xoachitietgiaodich(string pso)
         {
-            string query = "SELECT * FROM NGUYENLIEU WHERE tennguyenlieu like N'%" + tennguyenlieu + "%'";
-            return DataProvider.Instance.ExecuteQuery(query);
-
+            string query = "DELETE FROM NGUYENLIEU WHERE pso = " + pso;
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }
