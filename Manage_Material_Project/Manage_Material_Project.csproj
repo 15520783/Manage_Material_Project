@@ -33,12 +33,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,6 +80,11 @@
     <Compile Include="DAO\TaikhoanDAO.cs" />
     <Compile Include="DAO\TaikhoanketoanDAO.cs" />
     <Compile Include="DAO\TonkhoDAO.cs" />
+    <Compile Include="dbDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DTO\Nguyenlieu.cs" />
     <Compile Include="DTO\Danhmucphanxuong.cs" />
     <Compile Include="DTO\Phieu.cs" />
@@ -131,6 +146,18 @@
     <Compile Include="Views\frmLapPhieuXuatNguyenLieu.Designer.cs">
       <DependentUpon>frmLapPhieuXuatNguyenLieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmReportMuaNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmReportMuaNguyenLieu.designer.cs">
+      <DependentUpon>frmReportMuaNguyenLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmReportXuatNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmReportXuatNguyenLieu.designer.cs">
+      <DependentUpon>frmReportXuatNguyenLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmThemKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +170,12 @@
     <Compile Include="Views\frmThemNguyenLieu.Designer.cs">
       <DependentUpon>frmThemNguyenLieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmThongKeBaoBieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmThongKeBaoBieu.designer.cs">
+      <DependentUpon>frmThongKeBaoBieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +187,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\NhatKyMuaNguyenLieu.rdlc" />
+    <EmbeddedResource Include="Reports\NhatKyXuatNguyenLieu.rdlc" />
     <EmbeddedResource Include="Views\frmChonKhachHang.resx">
       <DependentUpon>frmChonKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,15 +210,35 @@
     <EmbeddedResource Include="Views\frmLapPhieuXuatNguyenLieu.resx">
       <DependentUpon>frmLapPhieuXuatNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmReportMuaNguyenLieu.resx">
+      <DependentUpon>frmReportMuaNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmReportXuatNguyenLieu.resx">
+      <DependentUpon>frmReportXuatNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmThemKhachHang.resx">
       <DependentUpon>frmThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmThemNguyenLieu.resx">
       <DependentUpon>frmThemNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmThongKeBaoBieu.resx">
+      <DependentUpon>frmThongKeBaoBieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dbDataset.xsc">
+      <DependentUpon>dbDataset.xsd</DependentUpon>
+    </None>
+    <None Include="dbDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dbDataset.xss">
+      <DependentUpon>dbDataset.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

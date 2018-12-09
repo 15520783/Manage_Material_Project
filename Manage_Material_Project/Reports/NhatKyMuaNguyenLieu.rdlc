@@ -951,7 +951,7 @@
         <Top>1.95014in</Top>
         <Left>0.19792in</Left>
         <Height>0.75in</Height>
-        <Width>13.72761in</Width>
+        <Width>13.72762in</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -1246,9 +1246,9 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="sohd">
-          <DataField>sohd</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="pso">
+          <DataField>pso</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ngayphathanh">
           <DataField>ngayphathanh</DataField>
@@ -1298,8 +1298,12 @@
           <DataField>tongthueGTGT</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="loaiHD">
-          <DataField>loaiHD</DataField>
+        <Field Name="loaiphieu">
+          <DataField>loaiphieu</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sohd">
+          <DataField>sohd</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="ten">
@@ -1336,8 +1340,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>dbDataSet</rd:DataSetName>
-        <rd:SchemaPath>F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\dbDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>dbDataset</rd:DataSetName>
+        <rd:SchemaPath>D:\Subject\Tài liệu năm 4\Học kì 1\Hệ thống thông tin kế toán\Manage_Material_Project\Manage_Material_Project\dbDataset.xsd</rd:SchemaPath>
         <rd:TableName>VIEW_NHATKYMUANGUYENLIEU</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

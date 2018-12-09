@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.dtpToDate = new System.Windows.Forms.DateTimePicker();
             this.dtpFromDate = new System.Windows.Forms.DateTimePicker();
-            this.dbDataSet = new Manage_Material_Project.dbDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dbDataset = new Manage_Material_Project.dbDataset();
             this.vIEWNHATKYMUANGUYENLIEUBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vIEW_NHATKYMUANGUYENLIEUTableAdapter = new Manage_Material_Project.dbDataSetTableAdapters.VIEW_NHATKYMUANGUYENLIEUTableAdapter();
+            this.vIEW_NHATKYMUANGUYENLIEUTableAdapter = new Manage_Material_Project.dbDatasetTableAdapters.VIEW_NHATKYMUANGUYENLIEUTableAdapter();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbDataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWNHATKYMUANGUYENLIEUBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,18 +50,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1355, 694);
             this.panel1.TabIndex = 0;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "NHATKYMUANGUYENLIEU";
-            reportDataSource1.Value = this.vIEWNHATKYMUANGUYENLIEUBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Manage_Material_Project.Reports.NhatKyMuaNguyenLieu.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1355, 694);
-            this.reportViewer1.TabIndex = 0;
             // 
             // btnThongKe
             // 
@@ -91,15 +79,29 @@
             this.dtpFromDate.Size = new System.Drawing.Size(200, 20);
             this.dtpFromDate.TabIndex = 4;
             // 
-            // dbDataSet
+            // reportViewer1
             // 
-            this.dbDataSet.DataSetName = "dbDataSet";
-            this.dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            reportDataSource1.Name = "NHATKYMUANGUYENLIEU";
+            reportDataSource1.Value = this.vIEWNHATKYMUANGUYENLIEUBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Manage_Material_Project.Reports.NhatKyMuaNguyenLieu.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(1355, 694);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // dbDataset
+            // 
+            this.dbDataset.DataSetName = "dbDataset";
+            this.dbDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // vIEWNHATKYMUANGUYENLIEUBindingSource
             // 
             this.vIEWNHATKYMUANGUYENLIEUBindingSource.DataMember = "VIEW_NHATKYMUANGUYENLIEU";
-            this.vIEWNHATKYMUANGUYENLIEUBindingSource.DataSource = this.dbDataSet;
+            this.vIEWNHATKYMUANGUYENLIEUBindingSource.DataSource = this.dbDataset;
             // 
             // vIEW_NHATKYMUANGUYENLIEUTableAdapter
             // 
@@ -118,7 +120,7 @@
             this.Text = "frmReportMuaNguyenLieu";
             this.Load += new System.EventHandler(this.frmReportMuaNguyenLieu_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbDataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWNHATKYMUANGUYENLIEUBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -127,12 +129,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.DateTimePicker dtpToDate;
         private System.Windows.Forms.DateTimePicker dtpFromDate;
-        private dbDataSet dbDataSet;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private dbDataset dbDataset;
         private System.Windows.Forms.BindingSource vIEWNHATKYMUANGUYENLIEUBindingSource;
-        private dbDataSetTableAdapters.VIEW_NHATKYMUANGUYENLIEUTableAdapter vIEW_NHATKYMUANGUYENLIEUTableAdapter;
+        private dbDatasetTableAdapters.VIEW_NHATKYMUANGUYENLIEUTableAdapter vIEW_NHATKYMUANGUYENLIEUTableAdapter;
     }
 }

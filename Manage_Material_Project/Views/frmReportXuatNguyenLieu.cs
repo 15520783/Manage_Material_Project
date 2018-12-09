@@ -20,10 +20,12 @@ namespace Manage_Material_Project.Views
 
         private void frmReportXuatNguyenLieu_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dbDataset.VIEW_NHATKYXUATNGUYENLIEU' table. You can move, or remove it, as needed.
+            this.vIEW_NHATKYXUATNGUYENLIEUTableAdapter.Fill(this.dbDataset.VIEW_NHATKYXUATNGUYENLIEU);
             // TODO: This line of code loads data into the 'dbDataSet.VIEW_NHATKYXUATNGUYENLIEU' table. You can move, or remove it, as needed.
-            this.vIEW_NHATKYXUATNGUYENLIEUTableAdapter.Fill(this.dbDataSet.VIEW_NHATKYXUATNGUYENLIEU);
             this.reportViewer1.RefreshReport();
             this.SetParameters(dtpFromDate.Value, dtpToDate.Value);
+            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
 

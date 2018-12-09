@@ -25,31 +25,7 @@ namespace Manage_Material_Project.DAO
         }
 
         public DataProvider() { }
-        SqlConnection conn;
 
-
-        /* public void Connect()
-         {
-             this.conn = new SqlConnection(connectionString);
-             this.conn.Open();
-         }
-
-         public void Disconnect()
-         {
-             this.conn.Close();
-         }
-
-         private DataTable Getdata(string QuerrySQL)
-         {
-             Connect();
-             SqlCommand cmd = new SqlCommand();
-             cmd.CommandText = QuerrySQL;
-             SqlDataAdapter sda = new SqlDataAdapter(cmd.CommandText, conn);
-             DataTable dt = new DataTable();
-             sda.Fill(dt);
-             Disconnect();
-             return dt;
-         }*/
 
         public DataTable ExecuteQuery(string query, object[] parameters = null)
         {
