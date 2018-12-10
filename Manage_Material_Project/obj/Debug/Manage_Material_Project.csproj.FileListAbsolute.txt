@@ -148,3 +148,13 @@ F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Mate
 F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThongKeBaoBieu.resources
 F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\RdlCompile.cache
 F:\TAI LIEU HOC TAP CHUYEN NGANH\HTTTKT\DoAn\Manage_Material_Project\Manage_Material_Project\obj\Debug\RdlCompile.compiled
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmChonKhachHang.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmChonKho.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmChonNguyenLieu.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmReportMuaNguyenLieu.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmReportXuatNguyenLieu.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\Manage_Material_Project.Views.frmThongKeBaoBieu.resources
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\RdlCompile.cache
+E:\Ketoan\Manage_Material_Project\Manage_Material_Project\obj\Debug\RdlCompile.compiled
