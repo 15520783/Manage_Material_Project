@@ -104,6 +104,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Utilities\ComboBoxItem.cs" />
+    <Compile Include="Views\frmReportHachToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmReportHachToan.Designer.cs">
+      <DependentUpon>frmReportHachToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmChonKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\NhatKyMuaNguyenLieu.rdlc" />
     <EmbeddedResource Include="Reports\NhatKyXuatNguyenLieu.rdlc" />
+    <EmbeddedResource Include="Reports\HachToan.rdlc" />
     <EmbeddedResource Include="Views\frmChonKhachHang.resx">
       <DependentUpon>frmChonKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmLapPhieuXuatNguyenLieu.resx">
       <DependentUpon>frmLapPhieuXuatNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmReportHachToan.resx">
+      <DependentUpon>frmReportHachToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmReportMuaNguyenLieu.resx">
       <DependentUpon>frmReportMuaNguyenLieu.cs</DependentUpon>
