@@ -21,6 +21,8 @@ namespace Manage_Material_Project.Views
 
         private void frmReportHachToan_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dbDataset.VIEW_HACHTOAN_NHAPHANG' table. You can move, or remove it, as needed.
+            this.vIEW_HACHTOAN_NHAPHANGTableAdapter.Fill(this.dbDataset.VIEW_HACHTOAN_NHAPHANG);
             // TODO: This line of code loads data into the 'dbDataset.VIEW_HACHTOAN' table. You can move, or remove it, as needed.
             this.vIEW_HACHTOANTableAdapter.Fill(this.dbDataset.VIEW_HACHTOAN);
 
