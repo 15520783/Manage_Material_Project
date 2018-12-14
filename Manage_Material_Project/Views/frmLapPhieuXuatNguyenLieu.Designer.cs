@@ -875,6 +875,7 @@
             this.dtmngayphathanh.Name = "dtmngayphathanh";
             this.dtmngayphathanh.Size = new System.Drawing.Size(162, 25);
             this.dtmngayphathanh.TabIndex = 65;
+            this.dtmngayphathanh.ValueChanged += new System.EventHandler(this.dtmngayphathanh_ValueChanged);
             // 
             // label3
             // 
@@ -1148,7 +1149,6 @@
             this.label1.Size = new System.Drawing.Size(218, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "XUẤT NGUYÊN LIỆU CHÍNH";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label_MaKho
             // 

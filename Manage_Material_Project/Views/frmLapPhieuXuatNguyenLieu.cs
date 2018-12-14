@@ -46,16 +46,7 @@ namespace Manage_Material_Project.Views
             txttenkho.Text = tenkho;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_STT_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void frmLapPhieuXuatNguyenLieu_Load(object sender, EventArgs e)
         {
             Setupdatagridview();            
@@ -415,6 +406,12 @@ namespace Manage_Material_Project.Views
             }
             else
                 MessageBox.Show("Không tồn tại phiếu số " + txtsophieu.Text + "trong hệ thống.", "Thông báo!");
+        }
+
+        private void dtmngayphathanh_ValueChanged(object sender, EventArgs e)
+        {
+            txtsophieu.Text = PhieuBUS.Instance._Getsohoadonmoinhat(3).ToString() + "-" + dtmngayphathanh.Value.Month + "-" + dtmngayphathanh.Value.Year % 100;
+
         }
     }
 }
