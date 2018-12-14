@@ -134,6 +134,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTaoPhieuMua);
             this.Name = "frmThongKeBaoBieu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmThongKeBaoBieu";
             this.ResumeLayout(false);
 

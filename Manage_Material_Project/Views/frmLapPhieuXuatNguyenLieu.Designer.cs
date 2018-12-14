@@ -35,7 +35,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txttongcong = new System.Windows.Forms.TextBox();
             this.label1_TongThanhToan = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtthueGTGT1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txttienbangchu = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -171,7 +171,7 @@
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.txttongcong);
             this.panel6.Controls.Add(this.label1_TongThanhToan);
-            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.txtthueGTGT1);
             this.panel6.Controls.Add(this.textBox2);
             this.panel6.Controls.Add(this.txttienbangchu);
             this.panel6.Controls.Add(this.textBox3);
@@ -220,16 +220,16 @@
             this.label1_TongThanhToan.TabIndex = 19;
             this.label1_TongThanhToan.Text = "Tổng tiền thanh toán:";
             // 
-            // textBox1
+            // txtthueGTGT1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Red;
-            this.textBox1.Location = new System.Drawing.Point(447, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(229, 25);
-            this.textBox1.TabIndex = 12;
+            this.txtthueGTGT1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtthueGTGT1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtthueGTGT1.ForeColor = System.Drawing.Color.Red;
+            this.txtthueGTGT1.Location = new System.Drawing.Point(447, 96);
+            this.txtthueGTGT1.Name = "txtthueGTGT1";
+            this.txtthueGTGT1.ReadOnly = true;
+            this.txtthueGTGT1.Size = new System.Drawing.Size(229, 25);
+            this.txtthueGTGT1.TabIndex = 12;
             // 
             // textBox2
             // 
@@ -944,6 +944,7 @@
             this.txtthuesuat.Name = "txtthuesuat";
             this.txtthuesuat.Size = new System.Drawing.Size(49, 25);
             this.txtthuesuat.TabIndex = 59;
+            this.txtthuesuat.TextChanged += new System.EventHandler(this.txtthuesuat_TextChanged);
             // 
             // txtlydo
             // 
@@ -1343,7 +1344,7 @@
         private System.Windows.Forms.Label label_MaKho;
         private System.Windows.Forms.TextBox txttongcong;
         private System.Windows.Forms.Label label1_TongThanhToan;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtthueGTGT1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txttienbangchu;
         private System.Windows.Forms.TextBox textBox3;

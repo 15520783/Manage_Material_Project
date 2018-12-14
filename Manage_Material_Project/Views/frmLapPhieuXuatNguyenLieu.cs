@@ -235,26 +235,18 @@ namespace Manage_Material_Project.Views
             if (dgvnhapnguyenlieu.CurrentCell != null)
             {
                 int indexrow = dgvnhapnguyenlieu.CurrentCell.RowIndex;
-                //cell đơn giá
-                if (dgvnhapnguyenlieu.CurrentCell.ColumnIndex.Equals(3) && e.RowIndex != -1)
+                //cell mã nguyên liệu
+                if (dgvnhapnguyenlieu.CurrentCell.ColumnIndex.Equals(1) && e.RowIndex != -1)
                 {
-
-                    if (dgvnhapnguyenlieu.Rows[indexrow].Cells["soluong"].Value.ToString() != "")
+                    double dongia = Tinhdongiaxuatkho(Convert.ToInt32(dgvnhapnguyenlieu.Rows[indexrow].Cells["manl"].Value), Convert.ToInt32(txtmakho.Text));
+                    dgvnhapnguyenlieu.Rows[indexrow].Cells["dongia"].Value = dongia; 
+                    if (dgvnhapnguyenlieu.Rows[indexrow].Cells["soluong"].Value != null)
                     {
-                        dgvnhapnguyenlieu.Rows[indexrow].Cells["thanhtien"].Value = Convert.ToUInt32(dgvnhapnguyenlieu.Rows[indexrow].Cells["soluong"].Value) * Convert.ToUInt32(dgvnhapnguyenlieu.Rows[indexrow].Cells["dongia"].Value);
+                        dgvnhapnguyenlieu.Rows[indexrow].Cells["thanhtien"].Value = Convert.ToUInt32(dgvnhapnguyenlieu.Rows[indexrow].Cells["soluong"].Value) * dongia;
                         dgvnhapnguyenlieu.Rows[indexrow].Cells["tienchuack"].Value = dgvnhapnguyenlieu.Rows[indexrow].Cells["thanhtien"].Value;
                     }
 
-                    //Thay đổi các textbox tính tiền hàng
-                    tongtienhang += Convert.ToDouble(dgvnhapnguyenlieu.Rows[indexrow].Cells["thanhtien"].Value);
-                    txttongtienhang.Text = tongtienhang.ToString();
-                    if (txtthuesuat.Text != "")
-                    {
-                        txtthueGTGT.Text = (tongtienhang * Convert.ToDouble(txtthuesuat.Text) * 0.01).ToString();
-                    }
-                    else txtthueGTGT.Text = "0";
-                    txttongcong.Text = (tongtienhang + Convert.ToDouble(txtthueGTGT.Text)).ToString();
-                    txttienbangchu.Text = ModuleChuyenTienSangChu.So_chu(Convert.ToDouble(txttongcong.Text));
+                    
                 }
                 //cell số lượng
                 if (dgvnhapnguyenlieu.CurrentCell.ColumnIndex.Equals(2) && e.RowIndex != -1)
@@ -269,6 +261,17 @@ namespace Manage_Material_Project.Views
                         dgvnhapnguyenlieu.Rows[indexrow].Cells["thanhtien"].Value = Convert.ToUInt32(dgvnhapnguyenlieu.Rows[indexrow].Cells["soluong"].Value) * Convert.ToUInt32(dgvnhapnguyenlieu.Rows[indexrow].Cells["dongia"].Value);
                         dgvnhapnguyenlieu.Rows[indexrow].Cells["tienchuack"].Value = dgvnhapnguyenlieu.Rows[indexrow].Cells["thanhtien"].Value;
                     }
+
+                    //Thay đổi các textbox tính tiền hàng
+                    tongtienhang += Convert.ToDouble(dgvnhapnguyenlieu.Rows[indexrow].Cells["thanhtien"].Value);
+                    txttongtienhang.Text = tongtienhang.ToString();
+                    if (txtthuesuat.Text != "")
+                    {
+                        txtthueGTGT1.Text = (tongtienhang * Convert.ToDouble(txtthuesuat.Text) * 0.01).ToString();
+                    }
+                    else txtthueGTGT1.Text = "0";
+                    txttongcong.Text = (tongtienhang + Convert.ToDouble(txtthueGTGT1.Text)).ToString();
+                    txttienbangchu.Text = ModuleChuyenTienSangChu.So_chu(Convert.ToDouble(txttongcong.Text));
                 }
             }
         }
@@ -302,7 +305,16 @@ namespace Manage_Material_Project.Views
                 {
                     soluong = Convert.ToInt32(dgvnhapnguyenlieu.Rows[row].Cells["soluong"].Value.ToString());
                 }
-               
+
+                if (dgvnhapnguyenlieu.Rows[row].Cells["dongia"].Value != null)
+                {
+                    dongia = Convert.ToDouble(dgvnhapnguyenlieu.Rows[row].Cells["dongia"].Value.ToString());
+                }
+                if (dgvnhapnguyenlieu.Rows[row].Cells["thanhtien"].Value != null)
+                {
+                    thanhtien = Convert.ToDouble(dgvnhapnguyenlieu.Rows[row].Cells["thanhtien"].Value.ToString());
+                }
+
                 if ( dgvnhapnguyenlieu.Rows[row].Cells["soluong"].Value == null || dgvnhapnguyenlieu.Rows[row].Cells["manl"].Value == null)
                 {
                     MessageBox.Show("Thông báo", "Vui lòng nhập nguyên liệu cần xuất");
@@ -329,13 +341,13 @@ namespace Manage_Material_Project.Views
                 thuesuat = Convert.ToInt32(txtthuesuat.Text);
             }
 
-            double tongtien = 0;
+            double tongtien = Convert.ToDouble(txttongtienhang.Text);
             string taikhoanchinh = txttaikhoan.Text;
             string taikhoandu = txttaikhoandu.Text;
             string quyen = cmbquyen.Text;
             int makh = Convert.ToInt32(txtmakhachang.Text);
             var ngayban = Convert.ToDateTime(dtmngayban.Value);
-            double tongthueGTGT = 0;
+            double tongthueGTGT = Convert.ToDouble(txtthueGTGT1.Text);
             int makho = Convert.ToInt32(txtmakho.Text);
             //Thêm hóa đơn và chi tiết hóa đơn
             Phieu hoadongiaodich = new Phieu(txtsophieu.Text, sohoadon, ngayphathanh, ngaythanhtoan, hinhthucthanhtoan, lydo, thuesuat, tongtien, taikhoanchinh, taikhoandu, makho, quyen, makh, ngayban, tongthueGTGT, 3);
@@ -356,13 +368,14 @@ namespace Manage_Material_Project.Views
                             if (flagsoluong <= Convert.ToInt32(row["soluongton"]))
                             {
                                 flagsoluong = Convert.ToInt32(row["soluongton"]) - flagsoluong;
-                                TonkhoBUS.Instance._Updatetonkho(Convert.ToInt32(row["thang"]), Convert.ToInt32(row["nam"]), Convert.ToInt32(row["manl"]), Convert.ToInt32(row["makho"]), flagsoluong);
+                                double sotienmoi = flagsoluong * Convert.ToDouble(row["sotien"]) / Convert.ToInt32(row["soluongton"]);
+                                TonkhoBUS.Instance._Updatetonkho(Convert.ToInt32(row["thang"]), Convert.ToInt32(row["nam"]), Convert.ToInt32(row["manl"]), Convert.ToInt32(row["makho"]), flagsoluong,sotienmoi);
                                 break;
                             }
                             else
                             {
                                 flagsoluong = flagsoluong - Convert.ToInt32(row["soluongton"]);
-                                TonkhoBUS.Instance._Updatetonkho(Convert.ToInt32(row["thang"]), Convert.ToInt32(row["nam"]), Convert.ToInt32(row["manl"]), Convert.ToInt32(row["makho"]), 0);
+                                TonkhoBUS.Instance._Updatetonkho(Convert.ToInt32(row["thang"]), Convert.ToInt32(row["nam"]), Convert.ToInt32(row["manl"]), Convert.ToInt32(row["makho"]), 0,0);
 
                             }
                         }
@@ -412,6 +425,44 @@ namespace Manage_Material_Project.Views
         {
             txtsophieu.Text = PhieuBUS.Instance._Getsohoadonmoinhat(3).ToString() + "-" + dtmngayphathanh.Value.Month + "-" + dtmngayphathanh.Value.Year % 100;
 
+        }
+
+        private double Tinhdongiaxuatkho(int manl, int makho)
+        {
+            double tongtien = 0;
+            int soluong = 0;
+            DataTable dt = TonkhoBUS.Instance._Gettonkho(manl, makho);
+            foreach (DataRow row in dt.Rows)
+            {
+                tongtien += Convert.ToDouble(row["sotien"]);
+                soluong += Convert.ToInt32(row["soluongton"]);
+            }
+            if (soluong != 0)
+            {
+                return tongtien / soluong;
+            }
+
+            else return 0;
+        }
+
+        private void txtthuesuat_TextChanged(object sender, EventArgs e)
+        {
+            if (txttongtienhang.Text != "")
+            {
+                if (txtthuesuat.Text != "")
+                {
+                    txtthueGTGT1.Text = (Convert.ToDouble(txtthuesuat.Text) / 100 * Convert.ToDouble(txttongtienhang.Text)).ToString();
+                    txttongcong.Text = (Convert.ToDouble(txtthueGTGT1.Text) + Convert.ToDouble(txttongtienhang.Text)).ToString();
+                    txttienbangchu.Text = ModuleChuyenTienSangChu.So_chu(Convert.ToDouble(txttongcong.Text));
+                }
+                else
+                {
+                    txttongcong.Text = (txttongtienhang.Text).ToString();
+                    txttienbangchu.Text = ModuleChuyenTienSangChu.So_chu(Convert.ToDouble(txttongcong.Text));
+                    txtthueGTGT1.Text = "0";
+                }
+
+            }
         }
     }
 }

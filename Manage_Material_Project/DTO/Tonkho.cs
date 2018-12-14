@@ -13,14 +13,16 @@ namespace Manage_Material_Project.DTO
         public int manl { get; set; }
         public int makho { get; set; }
         public int soluongton { get; set; }
+        public double sotien { get; set; }
         
         public Tonkho() { }
-        public Tonkho(int thang, int nam, int manl, int soluongton, int makho) {
+        public Tonkho(int thang, int nam, int manl, int soluongton, int makho, double sotien) {
             this.manl = manl;
             this.thang = thang;
             this.nam = nam;
             this.soluongton = soluongton;
             this.makho = makho;
+            this.sotien = sotien;
        
         }
         

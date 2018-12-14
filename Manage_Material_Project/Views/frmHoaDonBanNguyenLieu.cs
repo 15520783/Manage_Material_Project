@@ -344,13 +344,14 @@ namespace Manage_Material_Project.Views
                            if(flagsoluong <= Convert.ToInt32(row["soluongton"]))
                             {
                                 flagsoluong = Convert.ToInt32(row["soluongton"]) - flagsoluong;
-                                TonkhoBUS.Instance._Updatetonkho(Convert.ToInt32(row["thang"]), Convert.ToInt32(row["nam"]), Convert.ToInt32(row["manl"]), Convert.ToInt32(row["makho"]), flagsoluong);
+                                double sotienmoi = flagsoluong * Convert.ToDouble(row["sotien"]) / Convert.ToInt32(row["soluongton"]);
+                                TonkhoBUS.Instance._Updatetonkho(Convert.ToInt32(row["thang"]), Convert.ToInt32(row["nam"]), Convert.ToInt32(row["manl"]), Convert.ToInt32(row["makho"]), flagsoluong,sotienmoi);
                                 break;
                             }
                            else
                             {
                                 flagsoluong = flagsoluong - Convert.ToInt32(row["soluongton"]);
-                                TonkhoBUS.Instance._Updatetonkho(Convert.ToInt32(row["thang"]), Convert.ToInt32(row["nam"]), Convert.ToInt32(row["manl"]), Convert.ToInt32(row["makho"]), 0);
+                                TonkhoBUS.Instance._Updatetonkho(Convert.ToInt32(row["thang"]), Convert.ToInt32(row["nam"]), Convert.ToInt32(row["manl"]), Convert.ToInt32(row["makho"]), 0,0);
 
                             }
                         }

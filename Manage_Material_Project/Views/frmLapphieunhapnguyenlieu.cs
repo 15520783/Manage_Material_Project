@@ -271,14 +271,15 @@ namespace Manage_Material_Project.Views
                         DataTable dt = TonkhoBUS.Instance._Kiemtratonkhotontai(dtmngayban.Value.Month, dtmngayban.Value.Year, Convert.ToInt32(txtmakho.Text), Convert.ToInt32(listChitietgiaodich[i].manl));
                         if(dt.Rows.Count == 0)
                         {
-                            TonkhoBUS.Instance._Themmoitonkho(Convert.ToInt32(txtmakho.Text), Convert.ToInt32(listChitietgiaodich[i].manl), dtmngayban.Value.Month, dtmngayban.Value.Year, Convert.ToInt32(listChitietgiaodich[i].soluong));
+                            TonkhoBUS.Instance._Themmoitonkho(Convert.ToInt32(txtmakho.Text), Convert.ToInt32(listChitietgiaodich[i].manl), dtmngayban.Value.Month, dtmngayban.Value.Year, Convert.ToInt32(listChitietgiaodich[i].soluong), Convert.ToDouble(listChitietgiaodich[i].thanhtien));
                         }
                         else
                         {
                             foreach (DataRow row in dt.Rows)
                             {
                                 int soluongtonmoi = Convert.ToInt32(row["soluongton"].ToString()) + listChitietgiaodich[i].soluong;
-                                TonkhoBUS.Instance._Updatetonkho(dtmngayban.Value.Month, dtmngayban.Value.Year, Convert.ToInt32(listChitietgiaodich[i].manl), Convert.ToInt32(txtmakho.Text), soluongtonmoi);
+                                double sotienmoi = Convert.ToDouble(row["sotien"].ToString()) + listChitietgiaodich[i].thanhtien;
+                                TonkhoBUS.Instance._Updatetonkho(dtmngayban.Value.Month, dtmngayban.Value.Year, Convert.ToInt32(listChitietgiaodich[i].manl), Convert.ToInt32(txtmakho.Text), soluongtonmoi,sotienmoi);
                             }
 
                         }
@@ -383,6 +384,26 @@ namespace Manage_Material_Project.Views
         {
             frmTrangChu.Instance.Show();
 
+        }
+
+        private void txtthuesuat_TextChanged_1(object sender, EventArgs e)
+        {
+            if (txttongtienhang.Text != "")
+            {
+                if (txtthuesuat.Text != "")
+                {
+                    txtthueGTGT.Text = (Convert.ToDouble(txtthuesuat.Text) / 100 * Convert.ToDouble(txttongtienhang.Text)).ToString();
+                    txttongcong.Text = (Convert.ToDouble(txtthueGTGT.Text) + Convert.ToDouble(txttongtienhang.Text)).ToString();
+                    txttienbangchu.Text = ModuleChuyenTienSangChu.So_chu(Convert.ToDouble(txttongcong.Text));
+                }
+                else
+                {
+                    txttongcong.Text = (txttongtienhang.Text).ToString();
+                    txttienbangchu.Text = ModuleChuyenTienSangChu.So_chu(Convert.ToDouble(txttongcong.Text));
+                    txtthueGTGT.Text = "0";
+                }
+
+            }
         }
     }
 }

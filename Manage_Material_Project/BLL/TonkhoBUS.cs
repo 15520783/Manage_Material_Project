@@ -23,14 +23,14 @@ namespace Manage_Material_Project.BLL
             }
         }
 
-        public int _Themmoitonkho(int makho, int manl, int thang, int nam, int soluongton)
+        public int _Themmoitonkho(int makho, int manl, int thang, int nam, int soluongton, double sotien)
         {
-            return TonkhoDAO.Instance.Themmoitonkho(makho, manl, thang, nam, soluongton);
+            return TonkhoDAO.Instance.Themmoitonkho(makho, manl, thang, nam, soluongton,sotien);
         }
 
-        public int _Updatetonkho(int thang, int nam, int manl, int makho, int soluongton)
+        public int _Updatetonkho(int thang, int nam, int manl, int makho, int soluongton, double sotien)
         {
-            return TonkhoDAO.Instance.Updatetonkho(thang, nam, manl, makho, soluongton);
+            return TonkhoDAO.Instance.Updatetonkho(thang, nam, manl, makho, soluongton, sotien);
         }
 
         public DataTable _Kiemtratonkhotontai(int thang, int nam, int makho, int manl)

@@ -509,6 +509,7 @@
             this.txtthuesuat.Name = "txtthuesuat";
             this.txtthuesuat.Size = new System.Drawing.Size(49, 25);
             this.txtthuesuat.TabIndex = 59;
+            this.txtthuesuat.TextChanged += new System.EventHandler(this.txtthuesuat_TextChanged_1);
             // 
             // txtlydo
             // 
