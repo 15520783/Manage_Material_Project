@@ -30,21 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewerHachToan = new Microsoft.Reporting.WinForms.ReportViewer();
             this.textBoxThang = new System.Windows.Forms.TextBox();
             this.labelThang = new System.Windows.Forms.Label();
             this.labelNam = new System.Windows.Forms.Label();
             this.textBoxNam = new System.Windows.Forms.TextBox();
             this.buttonHachToan = new System.Windows.Forms.Button();
-            this.vIEWHACHTOANBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbDataset = new Manage_Material_Project.dbDataset();
-            this.vIEW_HACHTOANTableAdapter = new Manage_Material_Project.dbDatasetTableAdapters.VIEW_HACHTOANTableAdapter();
-            this.vIEWHACHTOANNHAPHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vIEW_HACHTOAN_NHAPHANGTableAdapter = new Manage_Material_Project.dbDatasetTableAdapters.VIEW_HACHTOAN_NHAPHANGTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.vIEWHACHTOANBindingSource)).BeginInit();
+            this.hachtoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hachtoanTableAdapter = new Manage_Material_Project.dbDatasetTableAdapters.hachtoanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dbDataset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vIEWHACHTOANNHAPHANGBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hachtoanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewerHachToan
@@ -53,12 +49,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewerHachToan.DocumentMapCollapsed = true;
-            reportDataSource1.Name = "Hachtoan";
-            reportDataSource1.Value = this.vIEWHACHTOANBindingSource;
-            reportDataSource2.Name = "HachToan_HANGNHAP";
-            reportDataSource2.Value = this.vIEWHACHTOANNHAPHANGBindingSource;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.hachtoanBindingSource;
             this.reportViewerHachToan.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewerHachToan.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewerHachToan.LocalReport.ReportEmbeddedResource = "Manage_Material_Project.Reports.HachToan.rdlc";
             this.reportViewerHachToan.Location = new System.Drawing.Point(-1, 53);
             this.reportViewerHachToan.Name = "reportViewerHachToan";
@@ -107,28 +100,19 @@
             this.buttonHachToan.UseVisualStyleBackColor = true;
             this.buttonHachToan.Click += new System.EventHandler(this.buttonHachToan_Click);
             // 
-            // vIEWHACHTOANBindingSource
-            // 
-            this.vIEWHACHTOANBindingSource.DataMember = "VIEW_HACHTOAN";
-            this.vIEWHACHTOANBindingSource.DataSource = this.dbDataset;
-            // 
             // dbDataset
             // 
             this.dbDataset.DataSetName = "dbDataset";
             this.dbDataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // vIEW_HACHTOANTableAdapter
+            // hachtoanBindingSource
             // 
-            this.vIEW_HACHTOANTableAdapter.ClearBeforeFill = true;
+            this.hachtoanBindingSource.DataMember = "hachtoan";
+            this.hachtoanBindingSource.DataSource = this.dbDataset;
             // 
-            // vIEWHACHTOANNHAPHANGBindingSource
+            // hachtoanTableAdapter
             // 
-            this.vIEWHACHTOANNHAPHANGBindingSource.DataMember = "VIEW_HACHTOAN_NHAPHANG";
-            this.vIEWHACHTOANNHAPHANGBindingSource.DataSource = this.dbDataset;
-            // 
-            // vIEW_HACHTOAN_NHAPHANGTableAdapter
-            // 
-            this.vIEW_HACHTOAN_NHAPHANGTableAdapter.ClearBeforeFill = true;
+            this.hachtoanTableAdapter.ClearBeforeFill = true;
             // 
             // frmReportHachToan
             // 
@@ -144,9 +128,8 @@
             this.Name = "frmReportHachToan";
             this.Text = "Hạch toán";
             this.Load += new System.EventHandler(this.frmReportHachToan_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.vIEWHACHTOANBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbDataset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vIEWHACHTOANNHAPHANGBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hachtoanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,9 +144,7 @@
         private System.Windows.Forms.TextBox textBoxNam;
         private System.Windows.Forms.Button buttonHachToan;
         private dbDataset dbDataset;
-        private System.Windows.Forms.BindingSource vIEWHACHTOANBindingSource;
-        private dbDatasetTableAdapters.VIEW_HACHTOANTableAdapter vIEW_HACHTOANTableAdapter;
-        private System.Windows.Forms.BindingSource vIEWHACHTOANNHAPHANGBindingSource;
-        private dbDatasetTableAdapters.VIEW_HACHTOAN_NHAPHANGTableAdapter vIEW_HACHTOAN_NHAPHANGTableAdapter;
+        private System.Windows.Forms.BindingSource hachtoanBindingSource;
+        private dbDatasetTableAdapters.hachtoanTableAdapter hachtoanTableAdapter;
     }
 }

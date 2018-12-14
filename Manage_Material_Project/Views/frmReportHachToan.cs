@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
+using System.Data.SqlClient;
 
 
 namespace Manage_Material_Project.Views
@@ -21,31 +22,67 @@ namespace Manage_Material_Project.Views
 
         private void frmReportHachToan_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dbDataset.VIEW_HACHTOAN_NHAPHANG' table. You can move, or remove it, as needed.
-            this.vIEW_HACHTOAN_NHAPHANGTableAdapter.Fill(this.dbDataset.VIEW_HACHTOAN_NHAPHANG);
-            // TODO: This line of code loads data into the 'dbDataset.VIEW_HACHTOAN' table. You can move, or remove it, as needed.
-            this.vIEW_HACHTOANTableAdapter.Fill(this.dbDataset.VIEW_HACHTOAN);
-
+           
         }
 
-        public void SetParameters(String month, String year)
+        private void ShowResult()
         {
+            reportViewerHachToan.Reset();
+
+            DataTable dt = GetData(configMonth(textBoxThang.Text), textBoxNam.Text);
+            ReportDataSource rds = new ReportDataSource("hachtoan", dt);
+
+            this.reportViewerHachToan.LocalReport.DataSources.Add(rds);
+
+            this.reportViewerHachToan.LocalReport.ReportPath = "E:/Ketoan/Manage_Material_Project/Manage_Material_Project/Reports/HachToan.rdlc";
+
             ReportParameter[] rp_param = new ReportParameter[2];
-            rp_param[0] = new ReportParameter("Month");
-            rp_param[1] = new ReportParameter("Year");
 
+            rp_param[0] = new ReportParameter("Month", textBoxThang.Text);
+            rp_param[1] = new ReportParameter("Year", textBoxNam.Text);
 
-            rp_param[0].Values.Add(month.ToString());
-            rp_param[1].Values.Add(year.ToString());
+            try { 
+            this.reportViewerHachToan.LocalReport.SetParameters(rp_param);
+                }
+            catch (Exception e) { 
+                Console.WriteLine(e.ToString()); 
+            }
+            this.reportViewerHachToan.RefreshReport();
 
-            reportViewerHachToan.LocalReport.SetParameters(rp_param);
         }
 
         private void buttonHachToan_Click(object sender, EventArgs e)
         {
-            SetParameters(textBoxThang.Text, textBoxNam.Text);
-            reportViewerHachToan.RefreshReport();
+            ShowResult();
         }
 
+        private DataTable GetData(String month, String year)
+        {
+            
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(Properties.Settings.Default.dbConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("hachtoan",con);
+                cmd.CommandText = "hachtoan";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@month", month);
+                cmd.Parameters.AddWithValue("@year", year);
+
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(dt);
+            }
+            return dt;
+
+        }
+
+        private String configMonth(String month)
+        {
+            if (month.Length == 1)
+            {
+                return month = "0" + month;
+            }
+
+            return month;
+        }
     }
-}
+}   
