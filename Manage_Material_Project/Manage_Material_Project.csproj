@@ -187,6 +187,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LapTheKhoNguyenLieu.rdlc" />
     <EmbeddedResource Include="Reports\NhatKyMuaNguyenLieu.rdlc" />
     <EmbeddedResource Include="Reports\NhatKyXuatNguyenLieu.rdlc" />
     <EmbeddedResource Include="Views\frmChonKhachHang.resx">
