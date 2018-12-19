@@ -45,5 +45,11 @@ namespace Manage_Material_Project.Views
             this.Show();
         }
 
+        private void btnLapTheKho_Click(object sender, EventArgs e)
+        {
+            frmReportLapTheKhoNguyenLieu frmreportLapTheKho = new frmReportLapTheKhoNguyenLieu();
+            frmreportLapTheKho.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -42,9 +42,25 @@
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -80,6 +96,11 @@
     <Compile Include="DAO\TaikhoanDAO.cs" />
     <Compile Include="DAO\TaikhoanketoanDAO.cs" />
     <Compile Include="DAO\TonkhoDAO.cs" />
+    <Compile Include="DataSetTheKho.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTheKho.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dbDataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -103,6 +124,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Utilities\ComboBoxItem.cs" />
     <Compile Include="Views\frmReportHachToan.cs">
       <SubType>Form</SubType>
@@ -152,6 +174,12 @@
     <Compile Include="Views\frmLapPhieuXuatNguyenLieu.Designer.cs">
       <DependentUpon>frmLapPhieuXuatNguyenLieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmReportLapTheKhoNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmReportLapTheKhoNguyenLieu.Designer.cs">
+      <DependentUpon>frmReportLapTheKhoNguyenLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmReportMuaNguyenLieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +221,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LapTheKhoNguyenLieu.rdlc" />
     <EmbeddedResource Include="Reports\NhatKyMuaNguyenLieu.rdlc" />
     <EmbeddedResource Include="Reports\NhatKyXuatNguyenLieu.rdlc" />
     <EmbeddedResource Include="Reports\HachToan.rdlc" />
@@ -220,6 +249,9 @@
     <EmbeddedResource Include="Views\frmReportHachToan.resx">
       <DependentUpon>frmReportHachToan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmReportLapTheKhoNguyenLieu.resx">
+      <DependentUpon>frmReportLapTheKhoNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmReportMuaNguyenLieu.resx">
       <DependentUpon>frmReportMuaNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +270,17 @@
     <EmbeddedResource Include="Views\frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSetTheKho.xsc">
+      <DependentUpon>DataSetTheKho.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTheKho.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTheKho.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTheKho.xss">
+      <DependentUpon>DataSetTheKho.xsd</DependentUpon>
+    </None>
     <None Include="dbDataset.xsc">
       <DependentUpon>dbDataset.xsd</DependentUpon>
     </None>
@@ -271,6 +314,19 @@
     <None Include="Resources\icons8-buying-96.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\icons8-trash-can-50 %282%29 %281%29.png" />
     <None Include="Resources\icons8-trash-can-50 %281%29.png" />
     <None Include="Resources\icons8-plus-math-16.png" />
