@@ -1739,7 +1739,9 @@
               <TextRuns>
                 <TextRun>
                   <Value>Kế toán trưởng</Value>
-                  <Style />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style>

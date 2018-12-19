@@ -27,10 +27,8 @@ namespace Manage_Material_Project.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmTrangChu frmtrangchu = new frmTrangChu();
-            frmtrangchu.ShowDialog();
-            this.Show();
+            frmTrangChu.Instance.Show();
+            this.Close();
         }
 
         private void btnXemNhatKyMua_Click(object sender, EventArgs e)
@@ -39,5 +37,13 @@ namespace Manage_Material_Project.Views
             frmreportMuaNguyenLieu.ShowDialog();
             this.Show();
         }
+
+        private void button_HachToan_Click(object sender, EventArgs e)
+        {
+            frmReportHachToan frmreportHachToan = new frmReportHachToan();
+            frmreportHachToan.ShowDialog();
+            this.Show();
+        }
+
     }
 }

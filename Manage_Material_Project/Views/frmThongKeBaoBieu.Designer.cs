@@ -34,6 +34,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnXemNhatKyMua = new System.Windows.Forms.Button();
+            this.button_HachToan = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -96,17 +98,43 @@
             this.btnXemNhatKyMua.UseVisualStyleBackColor = false;
             this.btnXemNhatKyMua.Click += new System.EventHandler(this.btnXemNhatKyMua_Click);
             // 
+            // button_HachToan
+            // 
+            this.button_HachToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.button_HachToan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_HachToan.BackgroundImage")));
+            this.button_HachToan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button_HachToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_HachToan.Location = new System.Drawing.Point(798, 78);
+            this.button_HachToan.Name = "button_HachToan";
+            this.button_HachToan.Size = new System.Drawing.Size(185, 185);
+            this.button_HachToan.TabIndex = 13;
+            this.button_HachToan.UseVisualStyleBackColor = false;
+            this.button_HachToan.Click += new System.EventHandler(this.button_HachToan_Click);
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(761, 266);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(267, 25);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Hạch toán";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmThongKeBaoBieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button_HachToan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnXemNhatKyMua);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTaoPhieuMua);
             this.Name = "frmThongKeBaoBieu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmThongKeBaoBieu";
             this.ResumeLayout(false);
 
@@ -118,5 +146,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnXemNhatKyMua;
+        private System.Windows.Forms.Button button_HachToan;
+        private System.Windows.Forms.Label label3;
     }
 }

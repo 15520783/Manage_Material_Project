@@ -22,15 +22,15 @@ namespace Manage_Material_Project.DAO
             }
         }
 
-        public int Themmoitonkho (int makho, int manl, int thang, int nam, int soluongton)
+        public int Themmoitonkho (int makho, int manl, int thang, int nam, int soluongton, double sotien)
         {
-            string query = "INSERT INTO TONKHO VALUES (" + thang + "," + nam + "," + manl + "," + makho + "," + soluongton + ")";
+            string query = "INSERT INTO TONKHO VALUES (" + thang + "," + nam + "," + manl + "," + makho + "," + soluongton + ","+ sotien+")";
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
 
-        public int Updatetonkho (int thang, int nam, int manl, int makho, int soluongton)
+        public int Updatetonkho (int thang, int nam, int manl, int makho, int soluongton, double sotien)
         {
-            string query = "UPDATE TONKHO SET soluongton = " + soluongton + "WHERE thang = " + thang + "and nam = " + nam + "and manl = " + manl + "and makho = " + makho;
+            string query = "UPDATE TONKHO SET soluongton = " + soluongton + ",sotien ="+ sotien + "WHERE thang = " + thang + "and nam = " + nam + "and manl = " + manl + "and makho = " + makho;
             return DataProvider.Instance.ExecuteNonQuery(query);
         }
 
