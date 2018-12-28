@@ -34,8 +34,7 @@ namespace Manage_Material_Project.Views
 
             this.reportViewerHachToan.LocalReport.DataSources.Add(rds);
 
-            this.reportViewerHachToan.LocalReport.ReportPath = "E:/Ketoan/Manage_Material_Project/Manage_Material_Project/Reports/HachToan.rdlc";
-
+            this.reportViewerHachToan.LocalReport.ReportPath = "D:/HTTTKeToan/Hệ thống thông tin kế toán/Manage_Material_Project/Manage_Material_Project/Reports/HachToan.rdlc";
             ReportParameter[] rp_param = new ReportParameter[2];
 
             rp_param[0] = new ReportParameter("Month", textBoxThang.Text);

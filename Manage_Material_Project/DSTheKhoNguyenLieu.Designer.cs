@@ -20,9 +20,9 @@ namespace Manage_Material_Project {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSetTheKho")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DSTheKhoNguyenLieu")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSetTheKho : global::System.Data.DataSet {
+    public partial class DSTheKhoNguyenLieu : global::System.Data.DataSet {
         
         private VIEW_LAPTHEKHONGUYENLIEUDataTable tableVIEW_LAPTHEKHONGUYENLIEU;
         
@@ -30,7 +30,7 @@ namespace Manage_Material_Project {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DataSetTheKho() {
+        public DSTheKhoNguyenLieu() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Manage_Material_Project {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DataSetTheKho(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DSTheKhoNguyenLieu(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Manage_Material_Project {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSetTheKho cln = ((DataSetTheKho)(base.Clone()));
+            DSTheKhoNguyenLieu cln = ((DSTheKhoNguyenLieu)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Manage_Material_Project {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSetTheKho";
+            this.DataSetName = "DSTheKhoNguyenLieu";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSetTheKho.xsd";
+            this.Namespace = "http://tempuri.org/DSTheKhoNguyenLieu.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableVIEW_LAPTHEKHONGUYENLIEU = new VIEW_LAPTHEKHONGUYENLIEUDataTable();
@@ -225,7 +225,7 @@ namespace Manage_Material_Project {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSetTheKho ds = new DataSetTheKho();
+            DSTheKhoNguyenLieu ds = new DSTheKhoNguyenLieu();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -306,6 +306,8 @@ namespace Manage_Material_Project {
             private global::System.Data.DataColumn columnsoluong;
             
             private global::System.Data.DataColumn columnthanhtien;
+            
+            private global::System.Data.DataColumn columntennguyenlieu;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -454,6 +456,14 @@ namespace Manage_Material_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn tennguyenlieuColumn {
+                get {
+                    return this.columntennguyenlieu;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -489,7 +499,7 @@ namespace Manage_Material_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VIEW_LAPTHEKHONGUYENLIEURow AddVIEW_LAPTHEKHONGUYENLIEURow(string pso, System.DateTime ngayban, int sohd, int loaiphieu, int thang, int nam, int manl, int makho, int soluongton, decimal sotien, string ten, string tenkho, int soluong, decimal thanhtien) {
+            public VIEW_LAPTHEKHONGUYENLIEURow AddVIEW_LAPTHEKHONGUYENLIEURow(string pso, System.DateTime ngayban, int sohd, int loaiphieu, int thang, int nam, int manl, int makho, int soluongton, decimal sotien, string ten, string tenkho, int soluong, decimal thanhtien, string tennguyenlieu) {
                 VIEW_LAPTHEKHONGUYENLIEURow rowVIEW_LAPTHEKHONGUYENLIEURow = ((VIEW_LAPTHEKHONGUYENLIEURow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         pso,
@@ -505,7 +515,8 @@ namespace Manage_Material_Project {
                         ten,
                         tenkho,
                         soluong,
-                        thanhtien};
+                        thanhtien,
+                        tennguyenlieu};
                 rowVIEW_LAPTHEKHONGUYENLIEURow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVIEW_LAPTHEKHONGUYENLIEURow);
                 return rowVIEW_LAPTHEKHONGUYENLIEURow;
@@ -542,6 +553,7 @@ namespace Manage_Material_Project {
                 this.columntenkho = base.Columns["tenkho"];
                 this.columnsoluong = base.Columns["soluong"];
                 this.columnthanhtien = base.Columns["thanhtien"];
+                this.columntennguyenlieu = base.Columns["tennguyenlieu"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -575,6 +587,8 @@ namespace Manage_Material_Project {
                 base.Columns.Add(this.columnsoluong);
                 this.columnthanhtien = new global::System.Data.DataColumn("thanhtien", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnthanhtien);
+                this.columntennguyenlieu = new global::System.Data.DataColumn("tennguyenlieu", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntennguyenlieu);
                 this.columnpso.AllowDBNull = false;
                 this.columnpso.MaxLength = 200;
                 this.columnthang.AllowDBNull = false;
@@ -583,6 +597,7 @@ namespace Manage_Material_Project {
                 this.columnmakho.AllowDBNull = false;
                 this.columnten.MaxLength = 100;
                 this.columntenkho.MaxLength = 100;
+                this.columntennguyenlieu.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -650,7 +665,7 @@ namespace Manage_Material_Project {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSetTheKho ds = new DataSetTheKho();
+                DSTheKhoNguyenLieu ds = new DSTheKhoNguyenLieu();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -924,6 +939,23 @@ namespace Manage_Material_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string tennguyenlieu {
+                get {
+                    try {
+                        return ((string)(this[this.tableVIEW_LAPTHEKHONGUYENLIEU.tennguyenlieuColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tennguyenlieu\' in table \'VIEW_LAPTHEKHONGUYENLIEU\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableVIEW_LAPTHEKHONGUYENLIEU.tennguyenlieuColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsngaybanNull() {
                 return this.IsNull(this.tableVIEW_LAPTHEKHONGUYENLIEU.ngaybanColumn);
             }
@@ -1029,6 +1061,18 @@ namespace Manage_Material_Project {
             public void SetthanhtienNull() {
                 this[this.tableVIEW_LAPTHEKHONGUYENLIEU.thanhtienColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IstennguyenlieuNull() {
+                return this.IsNull(this.tableVIEW_LAPTHEKHONGUYENLIEU.tennguyenlieuColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SettennguyenlieuNull() {
+                this[this.tableVIEW_LAPTHEKHONGUYENLIEU.tennguyenlieuColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -1066,7 +1110,7 @@ namespace Manage_Material_Project {
         }
     }
 }
-namespace Manage_Material_Project.DataSetTheKhoTableAdapters {
+namespace Manage_Material_Project.DSTheKhoNguyenLieuTableAdapters {
     
     
     /// <summary>
@@ -1204,6 +1248,7 @@ namespace Manage_Material_Project.DataSetTheKhoTableAdapters {
             tableMapping.ColumnMappings.Add("tenkho", "tenkho");
             tableMapping.ColumnMappings.Add("soluong", "soluong");
             tableMapping.ColumnMappings.Add("thanhtien", "thanhtien");
+            tableMapping.ColumnMappings.Add("tennguyenlieu", "tennguyenlieu");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1220,17 +1265,26 @@ namespace Manage_Material_Project.DataSetTheKhoTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT pso, ngayban, sohd, loaiphieu, thang, nam, manl, makho, soluongton, sotien" +
-                ", ten, tenkho, soluong, thanhtien FROM dbo.VIEW_LAPTHEKHONGUYENLIEU";
+            this._commandCollection[0].CommandText = @"SELECT        pso, ngayban, sohd, loaiphieu, thang, nam, manl, makho, soluongton, sotien, ten, tenkho, soluong, thanhtien, tennguyenlieu
+FROM            VIEW_LAPTHEKHONGUYENLIEU
+WHERE        (makho = @makho) AND (manl = @manl) AND (thang = @thang) AND (nam = @nam)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@makho", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "makho", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@manl", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "manl", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@thang", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "thang", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nam", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "nam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetTheKho.VIEW_LAPTHEKHONGUYENLIEUDataTable dataTable) {
+        public virtual int Fill(DSTheKhoNguyenLieu.VIEW_LAPTHEKHONGUYENLIEUDataTable dataTable, int makho, int manl, int thang, int nam) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(makho));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(manl));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(thang));
+            this.Adapter.SelectCommand.Parameters[3].Value = ((int)(nam));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1242,9 +1296,13 @@ namespace Manage_Material_Project.DataSetTheKhoTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetTheKho.VIEW_LAPTHEKHONGUYENLIEUDataTable GetData() {
+        public virtual DSTheKhoNguyenLieu.VIEW_LAPTHEKHONGUYENLIEUDataTable GetData(int makho, int manl, int thang, int nam) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetTheKho.VIEW_LAPTHEKHONGUYENLIEUDataTable dataTable = new DataSetTheKho.VIEW_LAPTHEKHONGUYENLIEUDataTable();
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(makho));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(manl));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(thang));
+            this.Adapter.SelectCommand.Parameters[3].Value = ((int)(nam));
+            DSTheKhoNguyenLieu.VIEW_LAPTHEKHONGUYENLIEUDataTable dataTable = new DSTheKhoNguyenLieu.VIEW_LAPTHEKHONGUYENLIEUDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1318,7 +1376,7 @@ namespace Manage_Material_Project.DataSetTheKhoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(DataSetTheKho dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DSTheKhoNguyenLieu dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1328,7 +1386,7 @@ namespace Manage_Material_Project.DataSetTheKhoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(DataSetTheKho dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DSTheKhoNguyenLieu dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1338,7 +1396,7 @@ namespace Manage_Material_Project.DataSetTheKhoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(DataSetTheKho dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DSTheKhoNguyenLieu dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1372,7 +1430,7 @@ namespace Manage_Material_Project.DataSetTheKhoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(DataSetTheKho dataSet) {
+        public virtual int UpdateAll(DSTheKhoNguyenLieu dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

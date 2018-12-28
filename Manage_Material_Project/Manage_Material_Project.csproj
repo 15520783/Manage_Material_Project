@@ -96,15 +96,15 @@
     <Compile Include="DAO\TaikhoanDAO.cs" />
     <Compile Include="DAO\TaikhoanketoanDAO.cs" />
     <Compile Include="DAO\TonkhoDAO.cs" />
-    <Compile Include="DataSetTheKho.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetTheKho.xsd</DependentUpon>
-    </Compile>
     <Compile Include="dbDataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSTheKhoNguyenLieu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTheKhoNguyenLieu.xsd</DependentUpon>
     </Compile>
     <Compile Include="DTO\Nguyenlieu.cs" />
     <Compile Include="DTO\Danhmucphanxuong.cs" />
@@ -221,10 +221,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\LapTheKhoNguyenLieu.rdlc" />
     <EmbeddedResource Include="Reports\NhatKyMuaNguyenLieu.rdlc" />
     <EmbeddedResource Include="Reports\NhatKyXuatNguyenLieu.rdlc" />
     <EmbeddedResource Include="Reports\HachToan.rdlc" />
+    <EmbeddedResource Include="Reports\TheKhoNguyenLieu.rdlc" />
     <EmbeddedResource Include="Views\frmChonKhachHang.resx">
       <DependentUpon>frmChonKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,17 +270,6 @@
     <EmbeddedResource Include="Views\frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataSetTheKho.xsc">
-      <DependentUpon>DataSetTheKho.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetTheKho.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetTheKho.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSetTheKho.xss">
-      <DependentUpon>DataSetTheKho.xsd</DependentUpon>
-    </None>
     <None Include="dbDataset.xsc">
       <DependentUpon>dbDataset.xsd</DependentUpon>
     </None>
@@ -291,6 +280,17 @@
     </None>
     <None Include="dbDataset.xss">
       <DependentUpon>dbDataset.xsd</DependentUpon>
+    </None>
+    <None Include="DSTheKhoNguyenLieu.xsc">
+      <DependentUpon>DSTheKhoNguyenLieu.xsd</DependentUpon>
+    </None>
+    <None Include="DSTheKhoNguyenLieu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTheKhoNguyenLieu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSTheKhoNguyenLieu.xss">
+      <DependentUpon>DSTheKhoNguyenLieu.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
